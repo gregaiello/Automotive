@@ -10,24 +10,63 @@
 #define DELAY 500
 #define NUMBYTES 1
 #define BAUDRATE 115200
+#define BAUDRATE_CAN 100000
 
 // Functions
-void LED_init(LPC_GPIO_T *pGPIO, uint32_t port, uint8_t pin);
+void LED_Init(LPC_GPIO_T *pGPIO, uint32_t port, uint8_t pin);
 void LED_setvalue(LPC_GPIO_T *pGPIO, uint32_t port, uint8_t pin, bool value);
 void UART_Init(LPC_USART_T *pUART, uint32_t baudrate);
+void CAN_Init();
+void CAN_rx(uint8_t msg_obj_num);
+void CAN_tx(uint8_t msg_obj_num);
+void CAN_error(uint32_t error_info);
 void delay(long delay);
 
 // Variables
 uint8_t data = 0;
+uint32_t CanApiClkInitTable[2]; // CanApiClkInitTable[0] CANCLKDIV, this register determines the CAN clock signal, CanApiClkInitTable[1] CANBT register (page 291 datasheet)
+
+CCAN_MSG_OBJ_T msg_obj;
+
+CCAN_CALLBACKS_T callbacks = {
+	CAN_rx,
+	CAN_tx,
+	CAN_error,
+	NULL, //from here the spots are reserved for CANOpen, we do not need them now for this first example
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+};
+
 
 int main(void) {
 
     SystemCoreClockUpdate();
 
-    LED_init(LPC_GPIO, port_LED, pin_LED_RED);
-    LED_init(LPC_GPIO, port_LED, pin_LED_GREEN);
+    LED_Init(LPC_GPIO, port_LED, pin_LED_RED);
+    LED_Init(LPC_GPIO, port_LED, pin_LED_GREEN);
 
     UART_Init(LPC_USART, BAUDRATE);
+
+    CAN_Init();
+	LPC_CCAN_API->init_can(&CanApiClkInitTable[0], TRUE);
+	LPC_CCAN_API->config_calb(&callbacks);
+	NVIC_EnableIRQ(CAN_IRQn);
+	/* Send a simple one time CAN message */
+	msg_obj.msgobj  = 0;
+	msg_obj.mode_id = 0x345;
+	msg_obj.mask    = 0x0;
+	msg_obj.dlc     = 4;
+	msg_obj.data[0] = 'G';
+	msg_obj.data[1] = 'R';
+	msg_obj.data[2] = 'E';
+	msg_obj.data[3] = 'G';
+	msg_obj.data[4] = 'O';
+	msg_obj.data[5] = 'R';
+	msg_obj.data[6] = 'I';
+	msg_obj.data[7] = 'O';
+	LPC_CCAN_API->can_transmit(&msg_obj);
 
     bool temp = false;
     while(1) {
@@ -66,7 +105,57 @@ void UART_Init(LPC_USART_T *pUART, uint32_t baudrate)
 	Chip_UART_TXEnable(pUART); // Transmit Enable Register (automatically set to 1 after the reset but better to double check)
 }
 
-void LED_init(LPC_GPIO_T *pGPIO, uint32_t port, uint8_t pin)
+void CAN_Init()
+{
+	uint32_t pCLK, div, quanta, segs, seg1, seg2, clk_per_bit, can_sjw;
+	LPC_SYSCTL->SYSAHBCLKCTRL |= (1 << 17); // Enable clock to CAN peripheral
+	pCLK = Chip_Clock_GetMainClockRate(); // Get clock rate
+	clk_per_bit = pCLK / BAUDRATE_CAN; // Calculate the number of ticks for every bit (every bit composed by multiple quanta)
+
+	// Algorithm to get the (Re)synchronization jump width (online I found that we can set it to 3 and we would be fine)
+	for (div = 0; div <= 15; div++) // 4 bit -> 0..15 (where 0 is division by 1, ... , and 15 is division by 16)
+	{
+		for (quanta = 1; quanta <= 32; quanta++) // Idk why here it stops at 32 instead of 63
+		{
+			for (segs = 3; segs <= 17; segs++)
+			{
+				if (clk_per_bit == (segs * quanta * (div + 1)))
+				{
+					segs -= 3;
+					seg1 = segs / 2;
+					seg2 = segs - seg1;
+					can_sjw = seg1 > 3 ? 3 : seg1;
+					CanApiClkInitTable[0] = div; // CANCLKDIV register
+					CanApiClkInitTable[1] =	((quanta - 1) & 0x3F) | (can_sjw & 0x03) << 6 | (seg1 & 0x0F) << 8 | (seg2 & 0x07) << 12; // CANBT register
+					// CANBT register:
+					// 5:0   BRP - Baud rate prescaler, the value by which the oscillator frequency is divided for
+					//					generating the bit time quanta. The bit time is built up from
+					//					a multiple of this quanta.
+					//					Values from 0 to 63 (Hardware interprets the value programmed into these bits as the bit value +1)
+					// 7:6   SJW - (Re)synchronization jump width. Valid programmed values are 0 to 3
+					// 11:8  TSEG1 - Time segment before the sample point including	propagation segment.
+					// 14:12 TSEG2 - Time segment after the sample point
+					return;
+				}
+			}
+		}
+	}
+}
+
+void CAN_rx(uint8_t msg_obj_num)
+{
+	//TODO
+}
+void CAN_tx(uint8_t msg_obj_num)
+{
+	//TODO
+}
+void CAN_error(uint32_t error_info)
+{
+	//TODO
+}
+
+void LED_Init(LPC_GPIO_T *pGPIO, uint32_t port, uint8_t pin)
 {
 	// LED initialization: i) clock to the GPIO (all of them), ii) data direction register as output for the pin in the selected port
 	LPC_SYSCTL->SYSAHBCLKCTRL |= (1 << SYSCTL_CLOCK_GPIO);
