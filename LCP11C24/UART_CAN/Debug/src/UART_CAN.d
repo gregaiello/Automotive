@@ -1,4 +1,4 @@
-src/test1.o src/test1.d: ../src/test1.c \
+src/UART_CAN.o src/UART_CAN.d: ../src/UART_CAN.c \
  /home/gregorio/Documents/MCUXpresso/lpc_chip_11cxx_lib/inc/chip.h \
  /home/gregorio/Documents/MCUXpresso/lpc_chip_11cxx_lib/inc/lpc_types.h \
  /home/gregorio/Documents/MCUXpresso/lpc_chip_11cxx_lib/inc/sys_config.h \

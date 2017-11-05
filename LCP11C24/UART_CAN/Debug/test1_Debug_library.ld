@@ -5,7 +5,7 @@
  * Generated linker script file for LPC11C24/301
  * Created from library.ldt by FMCreateLinkLibraries
  * Using Freemarker v2.3.23
- * MCUXpresso IDE Debug Build on Nov 5, 2017 1:45:14 PM
+ * MCUXpresso IDE Debug Build on Nov 5, 2017 1:54:36 PM
  */
 
 GROUP (

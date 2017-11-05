@@ -4,22 +4,22 @@
 
 # Add inputs and outputs from these tool invocations to the build variables 
 C_SRCS += \
+../src/UART_CAN.c \
 ../src/cr_startup_lpc11xx.c \
 ../src/crp.c \
-../src/sysinit.c \
-../src/test1.c 
+../src/sysinit.c 
 
 OBJS += \
+./src/UART_CAN.o \
 ./src/cr_startup_lpc11xx.o \
 ./src/crp.o \
-./src/sysinit.o \
-./src/test1.o 
+./src/sysinit.o 
 
 C_DEPS += \
+./src/UART_CAN.d \
 ./src/cr_startup_lpc11xx.d \
 ./src/crp.d \
-./src/sysinit.d \
-./src/test1.d 
+./src/sysinit.d 
 
 
 # Each subdirectory must supply rules for building sources it contributes
