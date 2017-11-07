@@ -5,7 +5,7 @@
  * Generated linker script file for LPC11C24/301
  * Created from linkscript.ldt by FMCreateLinkLibraries
  * Using Freemarker v2.3.23
- * MCUXpresso IDE v10.0.2 [Build 411] [2017-07-11]  on Nov 7, 2017 11:53:17 PM
+ * MCUXpresso IDE v10.0.2 [Build 411] [2017-07-11]  on Nov 6, 2017 8:08:02 PM
  */
 
 INCLUDE "CAN_UART_Debug_library.ld"
@@ -28,15 +28,10 @@ SECTIONS
         LONG(LOADADDR(.data));
         LONG(    ADDR(.data));
         LONG(  SIZEOF(.data));
-        LONG(LOADADDR(.data_RAM2));
-        LONG(    ADDR(.data_RAM2));
-        LONG(  SIZEOF(.data_RAM2));
         __data_section_table_end = .;
         __bss_section_table = .;
         LONG(    ADDR(.bss));
         LONG(  SIZEOF(.bss));
-        LONG(    ADDR(.bss_RAM2));
-        LONG(  SIZEOF(.bss_RAM2));
         __bss_section_table_end = .;
         __section_table_end = . ;
 	    /* End of Global Section Table */
@@ -71,19 +66,6 @@ SECTIONS
 
     _etext = .;
         
-    /* DATA section for RAM_00 */
-    .data_RAM2 : ALIGN(4)
-    {
-        FILL(0xff)
-        PROVIDE(__start_data_RAM2 = .) ;
-        *(.ramfunc.$RAM2)
-        *(.ramfunc.$RAM_00)
-        *(.data.$RAM2*)
-        *(.data.$RAM_00*)
-        . = ALIGN(4) ;
-        PROVIDE(__end_data_RAM2 = .) ;
-     } > RAM_00 AT>MFlash32
-
     /* MAIN DATA SECTION */
     .uninit_RESERVED : ALIGN(4)
     {
@@ -102,15 +84,6 @@ SECTIONS
        . = ALIGN(4) ;
        _edata = . ;
     } > RamLoc8 AT>MFlash32
-    /* BSS section for RAM_00 */
-    .bss_RAM2 : ALIGN(4)
-    {
-       PROVIDE(__start_bss_RAM2 = .) ;
-       *(.bss.$RAM2*)
-       *(.bss.$RAM_00*)
-       . = ALIGN (. != 0 ? 4 : 1) ; /* avoid empty segment */
-       PROVIDE(__end_bss_RAM2 = .) ;
-    } > RAM_00 
     /* MAIN BSS SECTION */
     .bss : ALIGN(4)
     {
@@ -121,13 +94,6 @@ SECTIONS
         _ebss = .;
         PROVIDE(end = .);
     } > RamLoc8
-    /* NOINIT section for RAM_00 */
-    .noinit_RAM2 (NOLOAD) : ALIGN(4)
-    {
-       *(.noinit.$RAM2*)
-       *(.noinit.$RAM_00*)
-       . = ALIGN(4) ;
-    } > RAM_00 
     /* DEFAULT NOINIT SECTION */
     .noinit (NOLOAD): ALIGN(4)
     {

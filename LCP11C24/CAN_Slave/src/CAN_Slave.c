@@ -54,24 +54,13 @@ int main(void) {
 
     CAN_Init();
 
-	msg_obj.msgobj  = 1;
-	msg_obj.mode_id = 0x450;
-	msg_obj.mask    = 0xFFFFUL;
-	msg_obj.dlc     = 8;
-	msg_obj.data[0] = 'G';
-	msg_obj.data[1] = 'R';
-	msg_obj.data[2] = 'E';
-	msg_obj.data[3] = 'G';
-	msg_obj.data[4] = 'O';
-	msg_obj.data[5] = 'R';
-	msg_obj.data[6] = 'I';
-	msg_obj.data[7] = 'O';
-	LPC_CCAN_API->can_transmit(&msg_obj);
+    msg_obj.msgobj = 1;
+    msg_obj.mode_id = 0x450;
+    msg_obj.mask = 0x700;
+    LPC_CCAN_API->config_rxmsgobj(&msg_obj);
+	LED_setvalue(LPC_GPIO, port_LED, pin_LED_GREEN, false);
 
     while(1) {
-    	delay(DELAY);
-    	LED_setvalue(LPC_GPIO, port_LED, pin_LED_BLUE, false);
-    	Chip_UART_SendBlocking(LPC_USART, &(msg_obj.data), NUMBYTES);
     	delay(DELAY);
     }
     return 0 ;
@@ -140,11 +129,19 @@ void CAN_IRQHandler(void) {
 
 void CAN_rx(uint8_t msg_obj_num)
 {
+	msg_obj.msgobj = msg_obj_num;
+	LPC_CCAN_API->can_receive(&msg_obj);
+	LED_setvalue(LPC_GPIO, port_LED, pin_LED_BLUE, false);
+	if(	msg_obj.data[0] == 'G')
+	{
+    	LED_setvalue(LPC_GPIO, port_LED, pin_LED_RED, false);
+    	Chip_UART_SendBlocking(LPC_USART, &(msg_obj.data), NUMBYTES);
+	}
 }
+
 void CAN_tx(uint8_t msg_obj_num)
 {
-	LED_setvalue(LPC_GPIO, port_LED, pin_LED_GREEN, false);
-
+	//TODO
 }
 void CAN_error(uint32_t error_info)
 {
@@ -153,6 +150,7 @@ void CAN_error(uint32_t error_info)
 
 void LED_Init(LPC_GPIO_T *pGPIO, uint32_t port, uint8_t pin)
 {
+	Chip_GPIO_Init(LPC_GPIO);
 	// LED initialization: i) clock to the GPIO (all of them), ii) data direction register as output for the pin in the selected port
 	LPC_SYSCTL->SYSAHBCLKCTRL |= (1 << SYSCTL_CLOCK_GPIO);
 	pGPIO[port].DIR |= (1UL << pin);

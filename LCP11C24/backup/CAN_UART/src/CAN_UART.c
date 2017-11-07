@@ -10,7 +10,7 @@
 #define DELAY 100
 #define NUMBYTES 8
 #define BAUDRATE 115200
-#define BAUDRATE_CAN 500000
+#define BAUDRATE_CAN 100000
 
 // Functions
 void LED_Init(LPC_GPIO_T *pGPIO, uint32_t port, uint8_t pin);
@@ -21,8 +21,6 @@ void CAN_rx(uint8_t msg_obj_num);
 void CAN_tx(uint8_t msg_obj_num);
 void CAN_error(uint32_t error_info);
 void delay(long delay);
-
-void CAN_IRQHandler(void);
 
 // Variables
 uint8_t data = 0;
@@ -48,15 +46,16 @@ int main(void) {
 
     LED_Init(LPC_GPIO, port_LED, pin_LED_RED);
     LED_Init(LPC_GPIO, port_LED, pin_LED_GREEN);
-    LED_Init(LPC_GPIO, port_LED, pin_LED_BLUE);
 
     UART_Init(LPC_USART, BAUDRATE);
 
     CAN_Init();
-
+	//LPC_CCAN_API->config_calb(&callbacks);
+	//NVIC_EnableIRQ(CAN_IRQn);
+	/* Send a simple one time CAN message */
 	msg_obj.msgobj  = 1;
-	msg_obj.mode_id = 0x450;
-	msg_obj.mask    = 0xFFFFUL;
+	msg_obj.mode_id = 0x0UL;
+	msg_obj.mask    = 0x0UL;
 	msg_obj.dlc     = 8;
 	msg_obj.data[0] = 'G';
 	msg_obj.data[1] = 'R';
@@ -66,13 +65,19 @@ int main(void) {
 	msg_obj.data[5] = 'R';
 	msg_obj.data[6] = 'I';
 	msg_obj.data[7] = 'O';
+
 	LPC_CCAN_API->can_transmit(&msg_obj);
 
+    bool temp = false;
     while(1) {
+
     	delay(DELAY);
-    	LED_setvalue(LPC_GPIO, port_LED, pin_LED_BLUE, false);
+    	LED_setvalue(LPC_GPIO, port_LED, pin_LED_RED, temp);
+    	LED_setvalue(LPC_GPIO, port_LED, pin_LED_GREEN, !temp);
     	Chip_UART_SendBlocking(LPC_USART, &(msg_obj.data), NUMBYTES);
     	delay(DELAY);
+
+    	temp = !temp;
     }
     return 0 ;
 }
@@ -124,9 +129,7 @@ void CAN_Init()
 					// 7:6   SJW - (Re)synchronization jump width. Valid programmed values are 0 to 3
 					// 11:8  TSEG1 - Time segment before the sample point including	propagation segment.
 					// 14:12 TSEG2 - Time segment after the sample point
-					LPC_CCAN_API->init_can(&CanApiClkInitTable[0], TRUE);
-					LPC_CCAN_API->config_calb(&callbacks);
-					NVIC_EnableIRQ(CAN_IRQn);
+					LPC_CCAN_API->init_can(&CanApiClkInitTable[0], FALSE);
 					return;
 				}
 			}
@@ -134,17 +137,13 @@ void CAN_Init()
 	}
 }
 
-void CAN_IRQHandler(void) {
-	LPC_CCAN_API->isr();
-}
-
 void CAN_rx(uint8_t msg_obj_num)
 {
+	//TODO
 }
 void CAN_tx(uint8_t msg_obj_num)
 {
-	LED_setvalue(LPC_GPIO, port_LED, pin_LED_GREEN, false);
-
+	//TODO
 }
 void CAN_error(uint32_t error_info)
 {
