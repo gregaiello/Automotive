@@ -1,11 +1,11 @@
 /*
  * GENERATED FILE - DO NOT EDIT
  * (c) Code Red Technologies Ltd, 2008-2013
- * (c) NXP Semiconductors 2013-2017
+ * (c) NXP Semiconductors 2013-2018
  * Generated linker script file for LPC11C24/301
  * Created from linkscript.ldt by FMCreateLinkLibraries
  * Using Freemarker v2.3.23
- * MCUXpresso IDE Debug Build on Nov 8, 2017 7:14:21 PM
+ * MCUXpresso IDE v10.1.1 [Build 606] [2018-01-02] on Sep 25, 2018 6:27:41 PM
  */
 
 INCLUDE "CAN_UART_1_Debug_library.ld"
@@ -39,7 +39,7 @@ SECTIONS
         LONG(  SIZEOF(.bss_RAM2));
         __bss_section_table_end = .;
         __section_table_end = . ;
-	    /* End of Global Section Table */
+        /* End of Global Section Table */
 
         *(.after_vectors*)
 
@@ -147,4 +147,13 @@ SECTIONS
                                          + (( DEFINED(HardFault_Handler) ? HardFault_Handler : M0_HardFault_Handler ) + 1) 
                                          )
            );
+
+    /* Provide basic symbols giving location and size of main text
+     * block, including initial values of RW data sections. Note that
+     * these will need extending to give a complete picture with
+     * complex images (e.g multiple Flash banks).
+     */
+    _image_start = LOADADDR(.text);
+    _image_end = LOADADDR(.data) + SIZEOF(.data);
+    _image_size = _image_end - _image_start;
 }

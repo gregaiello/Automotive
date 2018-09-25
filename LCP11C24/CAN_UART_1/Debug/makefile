@@ -29,7 +29,7 @@ all: CAN_UART_1.axf
 CAN_UART_1.axf: $(OBJS) $(USER_OBJS)
 	@echo 'Building target: $@'
 	@echo 'Invoking: MCU Linker'
-	arm-none-eabi-gcc -nostdlib -L"/home/gregorio/Documents/MCUXpresso/lpc_chip_11cxx_lib/Debug" -Xlinker -Map="CAN_UART_1.map" -Xlinker --gc-sections -Xlinker -print-memory-usage -mcpu=cortex-m0 -mthumb -T "CAN_UART_1_Debug.ld" -o "CAN_UART_1.axf" $(OBJS) $(USER_OBJS) $(LIBS)
+	arm-none-eabi-gcc -nostdlib -L"/home/greg/Documents/CLIMER/Firmware/lpc_chip_11cxx_lib/Debug" -Xlinker -Map="CAN_UART_1.map" -Xlinker --gc-sections -Xlinker -print-memory-usage -mcpu=cortex-m0 -mthumb -T "CAN_UART_1_Debug.ld" -o "CAN_UART_1.axf" $(OBJS) $(USER_OBJS) $(LIBS)
 	@echo 'Finished building target: $@'
 	@echo ' '
 	$(MAKE) --no-print-directory post-build
