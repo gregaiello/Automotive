@@ -8,7 +8,6 @@
 #define pin_LED_GREEN 8
 #define pin_LED_BLUE 9
 #define NUMBYTES 8
-#define BAUDRATE 115200
 #define BAUDRATE_CAN 1000000
 
 // Defines I2C
@@ -20,8 +19,6 @@
 #define I2C_TRIAXIS_RESET    (uint8_t) 0xF0
 #define I2C_TRIAXIS_POLLING  (uint8_t) 0x3E
 #define I2C_TRIAXIS_SB_MODE  (uint8_t) 0xE
-#define BAUDRATE_UART 		 115200
-#define UART_DATA_LENGTH     (int) I2C_DATA_LENGTH-1+5
 #define pin_LED_RED 		 7
 #define pin_LED_GREEN 		 8
 #define pin_LED_BLUE 		 9
@@ -35,8 +32,8 @@ void CAN_Init();
 void CAN_rx(uint8_t msg_obj_num);
 void CAN_tx(uint8_t msg_obj_num);
 void CAN_error(uint32_t error_info);
-
 void CAN_IRQHandler(void);
+void delay(long delay);
 
 // Variables
 uint8_t data = 0;
