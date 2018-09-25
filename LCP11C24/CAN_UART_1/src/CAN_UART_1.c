@@ -10,7 +10,7 @@
 #define DELAY 100
 #define NUMBYTES 8
 #define BAUDRATE 115200
-#define BAUDRATE_CAN 500000
+#define BAUDRATE_CAN 1000000
 
 // Functions
 void LED_Init(LPC_GPIO_T *pGPIO, uint32_t port, uint8_t pin);
