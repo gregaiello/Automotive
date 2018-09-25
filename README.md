@@ -3,4 +3,4 @@ Small projects using CAN communication on the NXP LPC11C24 chip. <br>
 2- Test of UART through polling and interrupt. <br>
 3- Test of I2C through polling and interrupt. <br>
 <br>
-The projects are created using MCUEXpresso on Ubuntu 16.04.<br>
+All the projects are created using MCUXpresso on Ubuntu 16.04.<br>
