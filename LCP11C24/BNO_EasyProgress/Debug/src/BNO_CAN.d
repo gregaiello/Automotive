@@ -1,4 +1,4 @@
-src/CAN_UART_1.o src/CAN_UART_1.d: ../src/CAN_UART_1.c \
+src/BNO_CAN.o src/BNO_CAN.d: ../src/BNO_CAN.c \
  /home/greg/Documents/CLIMER/Firmware/lpc_chip_11cxx_lib/inc/chip.h \
  /home/greg/Documents/CLIMER/Firmware/lpc_chip_11cxx_lib/inc/lpc_types.h \
  /home/greg/Documents/CLIMER/Firmware/lpc_chip_11cxx_lib/inc/sys_config.h \

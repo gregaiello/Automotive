@@ -4,19 +4,19 @@
 
 # Add inputs and outputs from these tool invocations to the build variables 
 C_SRCS += \
-../src/CAN_UART_1.c \
+../src/BNO_CAN.c \
 ../src/cr_startup_lpc11xx.c \
 ../src/crp.c \
 ../src/sysinit.c 
 
 OBJS += \
-./src/CAN_UART_1.o \
+./src/BNO_CAN.o \
 ./src/cr_startup_lpc11xx.o \
 ./src/crp.o \
 ./src/sysinit.o 
 
 C_DEPS += \
-./src/CAN_UART_1.d \
+./src/BNO_CAN.d \
 ./src/cr_startup_lpc11xx.d \
 ./src/crp.d \
 ./src/sysinit.d 
