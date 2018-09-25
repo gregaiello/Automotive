@@ -63,6 +63,8 @@ int main(void) {
 
     CAN_Init();
 
+    I2C_Init();
+    configure_SSD1306();
 
     while(1){
     	LED_setvalue(LPC_GPIO, port_LED, pin_LED_RED, false);

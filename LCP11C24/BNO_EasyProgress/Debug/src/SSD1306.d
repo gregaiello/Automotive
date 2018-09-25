@@ -1,0 +1,79 @@
+src/SSD1306.o src/SSD1306.d: ../src/SSD1306.c \
+ /home/greg/Documents/CLIMER/Automotive/LCP11C24/BNO_EasyProgress/inc/SSD1306.h \
+ /home/greg/Documents/CLIMER/Automotive/LCP11C24/BNO_EasyProgress/inc/fonts.h \
+ /home/greg/Documents/CLIMER/Firmware/lpc_chip_11cxx_lib/inc/chip.h \
+ /home/greg/Documents/CLIMER/Firmware/lpc_chip_11cxx_lib/inc/lpc_types.h \
+ /home/greg/Documents/CLIMER/Firmware/lpc_chip_11cxx_lib/inc/sys_config.h \
+ /home/greg/Documents/CLIMER/Firmware/lpc_chip_11cxx_lib/inc/cmsis.h \
+ /home/greg/Documents/CLIMER/Firmware/lpc_chip_11cxx_lib/inc/cmsis_11cxx.h \
+ /home/greg/Documents/CLIMER/Firmware/lpc_chip_11cxx_lib/inc/core_cm0.h \
+ /home/greg/Documents/CLIMER/Firmware/lpc_chip_11cxx_lib/inc/core_cmInstr.h \
+ /home/greg/Documents/CLIMER/Firmware/lpc_chip_11cxx_lib/inc/core_cmFunc.h \
+ /home/greg/Documents/CLIMER/Firmware/lpc_chip_11cxx_lib/inc/pmu_11xx.h \
+ /home/greg/Documents/CLIMER/Firmware/lpc_chip_11cxx_lib/inc/fmc_11xx.h \
+ /home/greg/Documents/CLIMER/Firmware/lpc_chip_11cxx_lib/inc/sysctl_11xx.h \
+ /home/greg/Documents/CLIMER/Firmware/lpc_chip_11cxx_lib/inc/clock_11xx.h \
+ /home/greg/Documents/CLIMER/Firmware/lpc_chip_11cxx_lib/inc/iocon_11xx.h \
+ /home/greg/Documents/CLIMER/Firmware/lpc_chip_11cxx_lib/inc/timer_11xx.h \
+ /home/greg/Documents/CLIMER/Firmware/lpc_chip_11cxx_lib/inc/uart_11xx.h \
+ /home/greg/Documents/CLIMER/Firmware/lpc_chip_11cxx_lib/inc/ring_buffer.h \
+ /home/greg/Documents/CLIMER/Firmware/lpc_chip_11cxx_lib/inc/wwdt_11xx.h \
+ /home/greg/Documents/CLIMER/Firmware/lpc_chip_11cxx_lib/inc/ssp_11xx.h \
+ /home/greg/Documents/CLIMER/Firmware/lpc_chip_11cxx_lib/inc/romapi_11xx.h \
+ /home/greg/Documents/CLIMER/Firmware/lpc_chip_11cxx_lib/inc/error.h \
+ /home/greg/Documents/CLIMER/Firmware/lpc_chip_11cxx_lib/inc/adc_11xx.h \
+ /home/greg/Documents/CLIMER/Firmware/lpc_chip_11cxx_lib/inc/gpio_11xx_2.h \
+ /home/greg/Documents/CLIMER/Firmware/lpc_chip_11cxx_lib/inc/i2c_11xx.h \
+ /home/greg/Documents/CLIMER/Firmware/lpc_chip_11cxx_lib/inc/ccand_11xx.h
+
+/home/greg/Documents/CLIMER/Automotive/LCP11C24/BNO_EasyProgress/inc/SSD1306.h:
+
+/home/greg/Documents/CLIMER/Automotive/LCP11C24/BNO_EasyProgress/inc/fonts.h:
+
+/home/greg/Documents/CLIMER/Firmware/lpc_chip_11cxx_lib/inc/chip.h:
+
+/home/greg/Documents/CLIMER/Firmware/lpc_chip_11cxx_lib/inc/lpc_types.h:
+
+/home/greg/Documents/CLIMER/Firmware/lpc_chip_11cxx_lib/inc/sys_config.h:
+
+/home/greg/Documents/CLIMER/Firmware/lpc_chip_11cxx_lib/inc/cmsis.h:
+
+/home/greg/Documents/CLIMER/Firmware/lpc_chip_11cxx_lib/inc/cmsis_11cxx.h:
+
+/home/greg/Documents/CLIMER/Firmware/lpc_chip_11cxx_lib/inc/core_cm0.h:
+
+/home/greg/Documents/CLIMER/Firmware/lpc_chip_11cxx_lib/inc/core_cmInstr.h:
+
+/home/greg/Documents/CLIMER/Firmware/lpc_chip_11cxx_lib/inc/core_cmFunc.h:
+
+/home/greg/Documents/CLIMER/Firmware/lpc_chip_11cxx_lib/inc/pmu_11xx.h:
+
+/home/greg/Documents/CLIMER/Firmware/lpc_chip_11cxx_lib/inc/fmc_11xx.h:
+
+/home/greg/Documents/CLIMER/Firmware/lpc_chip_11cxx_lib/inc/sysctl_11xx.h:
+
+/home/greg/Documents/CLIMER/Firmware/lpc_chip_11cxx_lib/inc/clock_11xx.h:
+
+/home/greg/Documents/CLIMER/Firmware/lpc_chip_11cxx_lib/inc/iocon_11xx.h:
+
+/home/greg/Documents/CLIMER/Firmware/lpc_chip_11cxx_lib/inc/timer_11xx.h:
+
+/home/greg/Documents/CLIMER/Firmware/lpc_chip_11cxx_lib/inc/uart_11xx.h:
+
+/home/greg/Documents/CLIMER/Firmware/lpc_chip_11cxx_lib/inc/ring_buffer.h:
+
+/home/greg/Documents/CLIMER/Firmware/lpc_chip_11cxx_lib/inc/wwdt_11xx.h:
+
+/home/greg/Documents/CLIMER/Firmware/lpc_chip_11cxx_lib/inc/ssp_11xx.h:
+
+/home/greg/Documents/CLIMER/Firmware/lpc_chip_11cxx_lib/inc/romapi_11xx.h:
+
+/home/greg/Documents/CLIMER/Firmware/lpc_chip_11cxx_lib/inc/error.h:
+
+/home/greg/Documents/CLIMER/Firmware/lpc_chip_11cxx_lib/inc/adc_11xx.h:
+
+/home/greg/Documents/CLIMER/Firmware/lpc_chip_11cxx_lib/inc/gpio_11xx_2.h:
+
+/home/greg/Documents/CLIMER/Firmware/lpc_chip_11cxx_lib/inc/i2c_11xx.h:
+
+/home/greg/Documents/CLIMER/Firmware/lpc_chip_11cxx_lib/inc/ccand_11xx.h:
