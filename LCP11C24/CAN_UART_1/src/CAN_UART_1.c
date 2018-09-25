@@ -68,8 +68,10 @@ int main(void) {
 	msg_obj.data[7] = 'O';
 	LPC_CCAN_API->can_transmit(&msg_obj);
 
-    while(1)
-    {
+    while(1){
+    	LED_setvalue(LPC_GPIO, port_LED, pin_LED_RED, false);
+    	LED_setvalue(LPC_GPIO, port_LED, pin_LED_GREEN, false);
+    	LED_setvalue(LPC_GPIO, port_LED, pin_LED_BLUE, false);
     }
     return 0 ;
 }
