@@ -1,6 +1,7 @@
 // Includes
 #include "chip.h"
 #include <cr_section_macros.h>
+#include "SSD1306.h"
 
 // Defines
 #define port_LED 0
@@ -65,6 +66,9 @@ int main(void) {
 
     I2C_Init();
     configure_SSD1306();
+
+    SSD1306_DrawFilledCircle(40, 50, 5, SSD1306_COLOR_BLACK);
+    SSD1306_UpdateOLED();
 
     while(1){
     	LED_setvalue(LPC_GPIO, port_LED, pin_LED_RED, false);

@@ -22,7 +22,9 @@ src/BNO_CAN.o src/BNO_CAN.d: ../src/BNO_CAN.c \
  /home/greg/Documents/CLIMER/Firmware/lpc_chip_11cxx_lib/inc/adc_11xx.h \
  /home/greg/Documents/CLIMER/Firmware/lpc_chip_11cxx_lib/inc/gpio_11xx_2.h \
  /home/greg/Documents/CLIMER/Firmware/lpc_chip_11cxx_lib/inc/i2c_11xx.h \
- /home/greg/Documents/CLIMER/Firmware/lpc_chip_11cxx_lib/inc/ccand_11xx.h
+ /home/greg/Documents/CLIMER/Firmware/lpc_chip_11cxx_lib/inc/ccand_11xx.h \
+ /home/greg/Documents/CLIMER/Automotive/LCP11C24/BNO_EasyProgress/inc/SSD1306.h \
+ /home/greg/Documents/CLIMER/Automotive/LCP11C24/BNO_EasyProgress/inc/fonts.h
 
 /home/greg/Documents/CLIMER/Firmware/lpc_chip_11cxx_lib/inc/chip.h:
 
@@ -71,3 +73,7 @@ src/BNO_CAN.o src/BNO_CAN.d: ../src/BNO_CAN.c \
 /home/greg/Documents/CLIMER/Firmware/lpc_chip_11cxx_lib/inc/i2c_11xx.h:
 
 /home/greg/Documents/CLIMER/Firmware/lpc_chip_11cxx_lib/inc/ccand_11xx.h:
+
+/home/greg/Documents/CLIMER/Automotive/LCP11C24/BNO_EasyProgress/inc/SSD1306.h:
+
+/home/greg/Documents/CLIMER/Automotive/LCP11C24/BNO_EasyProgress/inc/fonts.h:
