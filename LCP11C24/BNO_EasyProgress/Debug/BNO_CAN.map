@@ -1193,49 +1193,49 @@ OUTPUT(BNO_CAN.axf elf32-littlearm)
  .debug_ranges  0x0000000000000360       0xe0 /home/greg/Documents/CLIMER/Firmware/lpc_chip_11cxx_lib/Debug/liblpc_chip_11cxx_lib.a(uart_11xx.o)
  .debug_ranges  0x0000000000000440       0x28 /home/greg/Documents/CLIMER/Firmware/lpc_chip_11cxx_lib/Debug/liblpc_chip_11cxx_lib.a(sysctl_11xx.o)
 
-.debug_macro    0x0000000000000000     0x36da
- .debug_macro   0x0000000000000000      0x20a ./src/BNO_CAN.o
- .debug_macro   0x000000000000020a      0x8c2 ./src/BNO_CAN.o
- .debug_macro   0x0000000000000acc       0x10 ./src/BNO_CAN.o
- .debug_macro   0x0000000000000adc      0x12d ./src/BNO_CAN.o
- .debug_macro   0x0000000000000c09      0x5b2 ./src/BNO_CAN.o
- .debug_macro   0x00000000000011bb       0x22 ./src/BNO_CAN.o
- .debug_macro   0x00000000000011dd       0x7b ./src/BNO_CAN.o
- .debug_macro   0x0000000000001258       0x10 ./src/BNO_CAN.o
- .debug_macro   0x0000000000001268       0x1f ./src/BNO_CAN.o
- .debug_macro   0x0000000000001287       0x3a ./src/BNO_CAN.o
- .debug_macro   0x00000000000012c1      0x241 ./src/BNO_CAN.o
- .debug_macro   0x0000000000001502      0x117 ./src/BNO_CAN.o
- .debug_macro   0x0000000000001619       0x22 ./src/BNO_CAN.o
- .debug_macro   0x000000000000163b       0xb2 ./src/BNO_CAN.o
- .debug_macro   0x00000000000016ed       0x10 ./src/BNO_CAN.o
- .debug_macro   0x00000000000016fd      0x137 ./src/BNO_CAN.o
- .debug_macro   0x0000000000001834       0x4c ./src/BNO_CAN.o
- .debug_macro   0x0000000000001880       0x16 ./src/BNO_CAN.o
- .debug_macro   0x0000000000001896      0x31a ./src/BNO_CAN.o
- .debug_macro   0x0000000000001bb0       0x2e ./src/BNO_CAN.o
- .debug_macro   0x0000000000001bde       0xb8 ./src/BNO_CAN.o
- .debug_macro   0x0000000000001c96       0x11 ./src/BNO_CAN.o
- .debug_macro   0x0000000000001ca7       0x7c ./src/BNO_CAN.o
- .debug_macro   0x0000000000001d23      0x21c ./src/BNO_CAN.o
- .debug_macro   0x0000000000001f3f      0x113 ./src/BNO_CAN.o
- .debug_macro   0x0000000000002052       0x82 ./src/BNO_CAN.o
- .debug_macro   0x00000000000020d4       0x9a ./src/BNO_CAN.o
- .debug_macro   0x000000000000216e       0x22 ./src/BNO_CAN.o
- .debug_macro   0x0000000000002190       0x46 ./src/BNO_CAN.o
- .debug_macro   0x00000000000021d6      0x195 ./src/SSD1306.o
- .debug_macro   0x000000000000236b       0xa0 ./src/SSD1306.o
- .debug_macro   0x000000000000240b       0x74 ./src/SSD1306.o
- .debug_macro   0x000000000000247f       0x1d ./src/cr_startup_lpc11xx.o
- .debug_macro   0x000000000000249c       0x5a ./src/fonts.o
- .debug_macro   0x00000000000024f6      0x148 ./src/sysinit.o
- .debug_macro   0x000000000000263e      0x148 /home/greg/Documents/CLIMER/Firmware/lpc_chip_11cxx_lib/Debug/liblpc_chip_11cxx_lib.a(chip_11xx.o)
- .debug_macro   0x0000000000002786      0x8b0 /home/greg/Documents/CLIMER/Firmware/lpc_chip_11cxx_lib/Debug/liblpc_chip_11cxx_lib.a(chip_11xx.o)
- .debug_macro   0x0000000000003036      0x148 /home/greg/Documents/CLIMER/Firmware/lpc_chip_11cxx_lib/Debug/liblpc_chip_11cxx_lib.a(clock_11xx.o)
- .debug_macro   0x000000000000317e      0x15a /home/greg/Documents/CLIMER/Firmware/lpc_chip_11cxx_lib/Debug/liblpc_chip_11cxx_lib.a(i2c_11xx.o)
- .debug_macro   0x00000000000032d8      0x148 /home/greg/Documents/CLIMER/Firmware/lpc_chip_11cxx_lib/Debug/liblpc_chip_11cxx_lib.a(sysinit_11xx.o)
- .debug_macro   0x0000000000003420      0x148 /home/greg/Documents/CLIMER/Firmware/lpc_chip_11cxx_lib/Debug/liblpc_chip_11cxx_lib.a(uart_11xx.o)
- .debug_macro   0x0000000000003568      0x172 /home/greg/Documents/CLIMER/Firmware/lpc_chip_11cxx_lib/Debug/liblpc_chip_11cxx_lib.a(sysctl_11xx.o)
+.debug_macro    0x0000000000000000     0x36b0
+ .debug_macro   0x0000000000000000      0x1e0 ./src/BNO_CAN.o
+ .debug_macro   0x00000000000001e0      0x8c2 ./src/BNO_CAN.o
+ .debug_macro   0x0000000000000aa2       0x10 ./src/BNO_CAN.o
+ .debug_macro   0x0000000000000ab2      0x12d ./src/BNO_CAN.o
+ .debug_macro   0x0000000000000bdf      0x5b2 ./src/BNO_CAN.o
+ .debug_macro   0x0000000000001191       0x22 ./src/BNO_CAN.o
+ .debug_macro   0x00000000000011b3       0x7b ./src/BNO_CAN.o
+ .debug_macro   0x000000000000122e       0x10 ./src/BNO_CAN.o
+ .debug_macro   0x000000000000123e       0x1f ./src/BNO_CAN.o
+ .debug_macro   0x000000000000125d       0x3a ./src/BNO_CAN.o
+ .debug_macro   0x0000000000001297      0x241 ./src/BNO_CAN.o
+ .debug_macro   0x00000000000014d8      0x117 ./src/BNO_CAN.o
+ .debug_macro   0x00000000000015ef       0x22 ./src/BNO_CAN.o
+ .debug_macro   0x0000000000001611       0xb2 ./src/BNO_CAN.o
+ .debug_macro   0x00000000000016c3       0x10 ./src/BNO_CAN.o
+ .debug_macro   0x00000000000016d3      0x137 ./src/BNO_CAN.o
+ .debug_macro   0x000000000000180a       0x4c ./src/BNO_CAN.o
+ .debug_macro   0x0000000000001856       0x16 ./src/BNO_CAN.o
+ .debug_macro   0x000000000000186c      0x31a ./src/BNO_CAN.o
+ .debug_macro   0x0000000000001b86       0x2e ./src/BNO_CAN.o
+ .debug_macro   0x0000000000001bb4       0xb8 ./src/BNO_CAN.o
+ .debug_macro   0x0000000000001c6c       0x11 ./src/BNO_CAN.o
+ .debug_macro   0x0000000000001c7d       0x7c ./src/BNO_CAN.o
+ .debug_macro   0x0000000000001cf9      0x21c ./src/BNO_CAN.o
+ .debug_macro   0x0000000000001f15      0x113 ./src/BNO_CAN.o
+ .debug_macro   0x0000000000002028       0x82 ./src/BNO_CAN.o
+ .debug_macro   0x00000000000020aa       0x9a ./src/BNO_CAN.o
+ .debug_macro   0x0000000000002144       0x22 ./src/BNO_CAN.o
+ .debug_macro   0x0000000000002166       0x46 ./src/BNO_CAN.o
+ .debug_macro   0x00000000000021ac      0x195 ./src/SSD1306.o
+ .debug_macro   0x0000000000002341       0xa0 ./src/SSD1306.o
+ .debug_macro   0x00000000000023e1       0x74 ./src/SSD1306.o
+ .debug_macro   0x0000000000002455       0x1d ./src/cr_startup_lpc11xx.o
+ .debug_macro   0x0000000000002472       0x5a ./src/fonts.o
+ .debug_macro   0x00000000000024cc      0x148 ./src/sysinit.o
+ .debug_macro   0x0000000000002614      0x148 /home/greg/Documents/CLIMER/Firmware/lpc_chip_11cxx_lib/Debug/liblpc_chip_11cxx_lib.a(chip_11xx.o)
+ .debug_macro   0x000000000000275c      0x8b0 /home/greg/Documents/CLIMER/Firmware/lpc_chip_11cxx_lib/Debug/liblpc_chip_11cxx_lib.a(chip_11xx.o)
+ .debug_macro   0x000000000000300c      0x148 /home/greg/Documents/CLIMER/Firmware/lpc_chip_11cxx_lib/Debug/liblpc_chip_11cxx_lib.a(clock_11xx.o)
+ .debug_macro   0x0000000000003154      0x15a /home/greg/Documents/CLIMER/Firmware/lpc_chip_11cxx_lib/Debug/liblpc_chip_11cxx_lib.a(i2c_11xx.o)
+ .debug_macro   0x00000000000032ae      0x148 /home/greg/Documents/CLIMER/Firmware/lpc_chip_11cxx_lib/Debug/liblpc_chip_11cxx_lib.a(sysinit_11xx.o)
+ .debug_macro   0x00000000000033f6      0x148 /home/greg/Documents/CLIMER/Firmware/lpc_chip_11cxx_lib/Debug/liblpc_chip_11cxx_lib.a(uart_11xx.o)
+ .debug_macro   0x000000000000353e      0x172 /home/greg/Documents/CLIMER/Firmware/lpc_chip_11cxx_lib/Debug/liblpc_chip_11cxx_lib.a(sysctl_11xx.o)
 
 .debug_line     0x0000000000000000     0x2862
  .debug_line    0x0000000000000000      0x533 ./src/BNO_CAN.o
@@ -1250,28 +1250,28 @@ OUTPUT(BNO_CAN.axf elf32-littlearm)
  .debug_line    0x0000000000002049      0x526 /home/greg/Documents/CLIMER/Firmware/lpc_chip_11cxx_lib/Debug/liblpc_chip_11cxx_lib.a(uart_11xx.o)
  .debug_line    0x000000000000256f      0x2f3 /home/greg/Documents/CLIMER/Firmware/lpc_chip_11cxx_lib/Debug/liblpc_chip_11cxx_lib.a(sysctl_11xx.o)
 
-.debug_str      0x0000000000000000     0xab4b
- .debug_str     0x0000000000000000     0x95b5 ./src/BNO_CAN.o
-                                       0x9705 (size before relaxing)
- .debug_str     0x00000000000095b5      0x1c5 ./src/SSD1306.o
+.debug_str      0x0000000000000000     0xaa7f
+ .debug_str     0x0000000000000000     0x94e9 ./src/BNO_CAN.o
+                                       0x9639 (size before relaxing)
+ .debug_str     0x00000000000094e9      0x1c5 ./src/SSD1306.o
                                        0x856d (size before relaxing)
- .debug_str     0x000000000000977a      0x18c ./src/cr_startup_lpc11xx.o
+ .debug_str     0x00000000000096ae      0x18c ./src/cr_startup_lpc11xx.o
                                        0x26a9 (size before relaxing)
- .debug_str     0x0000000000009906       0x5f ./src/fonts.o
+ .debug_str     0x000000000000983a       0x5f ./src/fonts.o
                                        0x3cf6 (size before relaxing)
- .debug_str     0x0000000000009965       0x11 ./src/sysinit.o
+ .debug_str     0x0000000000009899       0x11 ./src/sysinit.o
                                        0x7e80 (size before relaxing)
- .debug_str     0x0000000000009976      0x114 /home/greg/Documents/CLIMER/Firmware/lpc_chip_11cxx_lib/Debug/liblpc_chip_11cxx_lib.a(chip_11xx.o)
+ .debug_str     0x00000000000098aa      0x114 /home/greg/Documents/CLIMER/Firmware/lpc_chip_11cxx_lib/Debug/liblpc_chip_11cxx_lib.a(chip_11xx.o)
                                        0x7e4b (size before relaxing)
- .debug_str     0x0000000000009a8a      0x555 /home/greg/Documents/CLIMER/Firmware/lpc_chip_11cxx_lib/Debug/liblpc_chip_11cxx_lib.a(clock_11xx.o)
+ .debug_str     0x00000000000099be      0x555 /home/greg/Documents/CLIMER/Firmware/lpc_chip_11cxx_lib/Debug/liblpc_chip_11cxx_lib.a(clock_11xx.o)
                                        0x861f (size before relaxing)
- .debug_str     0x0000000000009fdf      0x5d6 /home/greg/Documents/CLIMER/Firmware/lpc_chip_11cxx_lib/Debug/liblpc_chip_11cxx_lib.a(i2c_11xx.o)
+ .debug_str     0x0000000000009f13      0x5d6 /home/greg/Documents/CLIMER/Firmware/lpc_chip_11cxx_lib/Debug/liblpc_chip_11cxx_lib.a(i2c_11xx.o)
                                        0x8856 (size before relaxing)
- .debug_str     0x000000000000a5b5      0x136 /home/greg/Documents/CLIMER/Firmware/lpc_chip_11cxx_lib/Debug/liblpc_chip_11cxx_lib.a(sysinit_11xx.o)
+ .debug_str     0x000000000000a4e9      0x136 /home/greg/Documents/CLIMER/Firmware/lpc_chip_11cxx_lib/Debug/liblpc_chip_11cxx_lib.a(sysinit_11xx.o)
                                        0x84c2 (size before relaxing)
- .debug_str     0x000000000000a6eb      0x2c1 /home/greg/Documents/CLIMER/Firmware/lpc_chip_11cxx_lib/Debug/liblpc_chip_11cxx_lib.a(uart_11xx.o)
+ .debug_str     0x000000000000a61f      0x2c1 /home/greg/Documents/CLIMER/Firmware/lpc_chip_11cxx_lib/Debug/liblpc_chip_11cxx_lib.a(uart_11xx.o)
                                        0x85d3 (size before relaxing)
- .debug_str     0x000000000000a9ac      0x19f /home/greg/Documents/CLIMER/Firmware/lpc_chip_11cxx_lib/Debug/liblpc_chip_11cxx_lib.a(sysctl_11xx.o)
+ .debug_str     0x000000000000a8e0      0x19f /home/greg/Documents/CLIMER/Firmware/lpc_chip_11cxx_lib/Debug/liblpc_chip_11cxx_lib.a(sysctl_11xx.o)
                                        0x8269 (size before relaxing)
 
 .comment        0x0000000000000000       0x7f

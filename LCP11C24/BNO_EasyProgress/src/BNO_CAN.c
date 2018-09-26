@@ -1,7 +1,14 @@
 // Includes
 #include "chip.h"
 #include <cr_section_macros.h>
+
+// Custom libraries
 #include "SSD1306.h"
+#include <BNO055.h>
+
+// Defines I2C
+#define SPEED_100KHZ         (uint32_t) 100000
+#define SPEED_400KHZ         (uint32_t) 400000
 
 // Defines
 #define port_LED 0
@@ -10,20 +17,6 @@
 #define pin_LED_BLUE 9
 #define NUMBYTES 8
 #define BAUDRATE_CAN 1000000
-
-// Defines I2C
-#define SPEED_100KHZ         (uint32_t) 100000
-#define SPEED_400KHZ         (uint32_t) 400000
-#define SLAVE_ADDRESS 		 (uint8_t) 0xC
-#define I2C_DATA_LENGTH		 (int) 7
-#define I2C_TRIAXIS_READ     (uint8_t) 0x4E
-#define I2C_TRIAXIS_RESET    (uint8_t) 0xF0
-#define I2C_TRIAXIS_POLLING  (uint8_t) 0x3E
-#define I2C_TRIAXIS_SB_MODE  (uint8_t) 0xE
-#define pin_LED_RED 		 7
-#define pin_LED_GREEN 		 8
-#define pin_LED_BLUE 		 9
-#define OK_TRIAXIS 		 	 1 << 4
 
 // Functions
 void LED_Init(LPC_GPIO_T *pGPIO, uint32_t port, uint8_t pin);
