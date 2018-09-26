@@ -9,6 +9,7 @@ C_SRCS += \
 ../src/SSD1306.c \
 ../src/cr_startup_lpc11xx.c \
 ../src/crp.c \
+../src/cube.c \
 ../src/fonts.c \
 ../src/sysinit.c 
 
@@ -18,6 +19,7 @@ OBJS += \
 ./src/SSD1306.o \
 ./src/cr_startup_lpc11xx.o \
 ./src/crp.o \
+./src/cube.o \
 ./src/fonts.o \
 ./src/sysinit.o 
 
@@ -27,6 +29,7 @@ C_DEPS += \
 ./src/SSD1306.d \
 ./src/cr_startup_lpc11xx.d \
 ./src/crp.d \
+./src/cube.d \
 ./src/fonts.d \
 ./src/sysinit.d 
 

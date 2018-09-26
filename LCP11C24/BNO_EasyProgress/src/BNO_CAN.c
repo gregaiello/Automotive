@@ -7,6 +7,7 @@
 // Custom libraries
 #include "SSD1306.h"
 #include "BNO055.h"
+#include "cube.h"
 
 // Defines I2C
 #define SPEED_100KHZ         (uint32_t) 100000
@@ -73,11 +74,27 @@ int main(void) {
     else if(check == 2) LED_setvalue(LPC_GPIO, port_LED, pin_LED_BLUE, false);
 
     uint8_t Euler[6];
+    int16_t Angle[3];
+
     memset(Euler, 0, 6*sizeof(uint8_t));
 
     check = get_Euler(Euler);
 
+    int16_t x = 0, y = 0, z = 0;
+
     while(1){
+    	get_Euler(Euler);
+    	x = ((int16_t)Euler[0]) | (((int16_t)Euler[1]) << 8);
+    	y = ((int16_t)Euler[2]) | (((int16_t)Euler[3]) << 8);
+    	z = ((int16_t)Euler[4]) | (((int16_t)Euler[5]) << 8);
+
+    	Angle[0] = (int16_t)((double)x)/16.0; //Roll
+    	Angle[1] = (int16_t)((double)y)/16.0; //Pitch
+    	Angle[2] = (int16_t)((double)z)/16.0; //Yaw
+
+    	cube(Angle);
+    	for(int i = 0; i < 20000; i++){__NOP();}
+
     }
     return 0 ;
 }
