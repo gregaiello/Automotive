@@ -9,6 +9,8 @@
 #ifndef BNO055_H
 #define BNO055_H
 
+#include <stdint.h>
+
 // BNO055 Defines
 //#define I2C_DEVICE_ADD (uint16_t)0x50
 #define I2C_DEVICE_ADD (uint16_t)0x28
@@ -32,5 +34,7 @@
 
 // Exported functions
 int init_BNO055();
+int get_Euler(uint8_t *Euler);
+int get_Quaternion(uint8_t *Quaternion);
 
 #endif

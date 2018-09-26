@@ -2,6 +2,7 @@
 #include "chip.h"
 #include <cr_section_macros.h>
 #include <stdio.h>
+#include <stdint.h>
 
 // Custom libraries
 #include "SSD1306.h"
@@ -71,10 +72,12 @@ int main(void) {
     else if(check == 1) LED_setvalue(LPC_GPIO, port_LED, pin_LED_GREEN, false);
     else if(check == 2) LED_setvalue(LPC_GPIO, port_LED, pin_LED_BLUE, false);
 
+    uint8_t Euler[6];
+    memset(Euler, 0, 6*sizeof(uint8_t));
+
+    check = get_Euler(Euler);
+
     while(1){
-    	//LED_setvalue(LPC_GPIO, port_LED, pin_LED_RED, false);
-    	//LED_setvalue(LPC_GPIO, port_LED, pin_LED_GREEN, false);
-    	//LED_setvalue(LPC_GPIO, port_LED, pin_LED_BLUE, false);
     }
     return 0 ;
 }
