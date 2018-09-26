@@ -4,6 +4,7 @@
 
 # Add inputs and outputs from these tool invocations to the build variables 
 C_SRCS += \
+../src/BNO055.c \
 ../src/BNO_CAN.c \
 ../src/SSD1306.c \
 ../src/cr_startup_lpc11xx.c \
@@ -12,6 +13,7 @@ C_SRCS += \
 ../src/sysinit.c 
 
 OBJS += \
+./src/BNO055.o \
 ./src/BNO_CAN.o \
 ./src/SSD1306.o \
 ./src/cr_startup_lpc11xx.o \
@@ -20,6 +22,7 @@ OBJS += \
 ./src/sysinit.o 
 
 C_DEPS += \
+./src/BNO055.d \
 ./src/BNO_CAN.d \
 ./src/SSD1306.d \
 ./src/cr_startup_lpc11xx.d \

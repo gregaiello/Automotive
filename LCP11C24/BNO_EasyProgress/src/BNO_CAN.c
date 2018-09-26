@@ -1,10 +1,11 @@
 // Includes
 #include "chip.h"
 #include <cr_section_macros.h>
+#include <stdio.h>
 
 // Custom libraries
 #include "SSD1306.h"
-#include <BNO055.h>
+#include "BNO055.h"
 
 // Defines I2C
 #define SPEED_100KHZ         (uint32_t) 100000
@@ -63,10 +64,17 @@ int main(void) {
     SSD1306_DrawFilledCircle(40, 50, 5, SSD1306_COLOR_BLACK);
     SSD1306_UpdateOLED();
 
+    uint8_t check = 5;
+    check = init_BNO055();
+
+    if(check == 0) LED_setvalue(LPC_GPIO, port_LED, pin_LED_RED, false);
+    else if(check == 1) LED_setvalue(LPC_GPIO, port_LED, pin_LED_GREEN, false);
+    else if(check == 2) LED_setvalue(LPC_GPIO, port_LED, pin_LED_BLUE, false);
+
     while(1){
-    	LED_setvalue(LPC_GPIO, port_LED, pin_LED_RED, false);
-    	LED_setvalue(LPC_GPIO, port_LED, pin_LED_GREEN, false);
-    	LED_setvalue(LPC_GPIO, port_LED, pin_LED_BLUE, false);
+    	//LED_setvalue(LPC_GPIO, port_LED, pin_LED_RED, false);
+    	//LED_setvalue(LPC_GPIO, port_LED, pin_LED_GREEN, false);
+    	//LED_setvalue(LPC_GPIO, port_LED, pin_LED_BLUE, false);
     }
     return 0 ;
 }
