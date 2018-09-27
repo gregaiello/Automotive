@@ -11,6 +11,6 @@
 
 #include <stdint.h>
 
-void cube(int16_t *Euler);
+void cube(double *Euler);
 
 #endif
