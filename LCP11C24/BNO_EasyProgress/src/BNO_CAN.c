@@ -5,9 +5,9 @@
 #include <stdint.h>
 
 // Custom libraries
-#include "SSD1306.h"
+//#include "SSD1306.h"
 #include "BNO055.h"
-#include "cube.h"
+//#include "cube.h"
 
 // Defines I2C
 #define SPEED_100KHZ         (uint32_t) 100000

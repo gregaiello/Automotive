@@ -1,3 +1,11 @@
+/**
+ * @author  Gregorio Aiello
+ * @email   gregorio.aiello91@gmail.com
+ * @version v1.0
+ * @license GNU GPL v3
+ * @brief   Library for writing to FLASH on LPC11C24
+ */
+
 #ifndef FLASH_H
 #define FLASH_H
 
