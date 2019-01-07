@@ -58,33 +58,36 @@ int main(void) {
     LED_Init(LPC_GPIO, port_LED, pin_LED_GREEN);
     LED_Init(LPC_GPIO, port_LED, pin_LED_BLUE);
 
-    CAN_Init();
+    //CAN_Init();
 
-    I2C_Init();
-    configure_SSD1306();
+    //I2C_Init();
+    //configure_SSD1306();
 
-    SSD1306_DrawFilledCircle(40, 50, 5, SSD1306_COLOR_BLACK);
-    SSD1306_UpdateOLED();
+    //SSD1306_DrawFilledCircle(40, 50, 5, SSD1306_COLOR_BLACK);
+    //SSD1306_UpdateOLED();
 
-    uint8_t check = 5;
-    check = init_BNO055();
+    //uint8_t check = 5;
+    //check = init_BNO055();
 
-    if(check == 0) LED_setvalue(LPC_GPIO, port_LED, pin_LED_RED, false);
-    else if(check == 1) LED_setvalue(LPC_GPIO, port_LED, pin_LED_GREEN, false);
-    else if(check == 2) LED_setvalue(LPC_GPIO, port_LED, pin_LED_BLUE, false);
+    //if(check == 0) LED_setvalue(LPC_GPIO, port_LED, pin_LED_RED, false);
+    //else if(check == 1) LED_setvalue(LPC_GPIO, port_LED, pin_LED_GREEN, false);
+    //else if(check == 2) LED_setvalue(LPC_GPIO, port_LED, pin_LED_BLUE, false);
 
-    uint8_t Euler[6];
-    double Angle[3];
+    //uint8_t Euler[6];
+    //double Angle[3];
 
-    memset(Euler, 0, 6*sizeof(uint8_t));
+    //memset(Euler, 0, 6*sizeof(uint8_t));
 
-    check = get_Euler(Euler);
+    //check = get_Euler(Euler);
 
-    int16_t x = 0, y = 0, z = 0;
-    uint8_t flag_angle = 0;
+    //int16_t x = 0, y = 0, z = 0;
+    //uint8_t flag_angle = 0;
 
     while(1){
-    	get_Euler(Euler);
+    	LED_setvalue(LPC_GPIO, port_LED, pin_LED_RED, false);
+    	LED_setvalue(LPC_GPIO, port_LED, pin_LED_GREEN, false);
+    	LED_setvalue(LPC_GPIO, port_LED, pin_LED_BLUE, false);
+    	/*get_Euler(Euler);
     	x = ((int16_t)Euler[0]) | (((int16_t)Euler[1]) << 8);
     	y = ((int16_t)Euler[2]) | (((int16_t)Euler[3]) << 8);
     	z = ((int16_t)Euler[4]) | (((int16_t)Euler[5]) << 8);
@@ -95,7 +98,7 @@ int main(void) {
 
     	cube(Angle);
 
-    	for(int i = 0; i < 100000; i++){__NOP();}
+    	for(int i = 0; i < 100000; i++){__NOP();}*/
     }
     return 0 ;
 }

@@ -17,7 +17,7 @@ Archive member included to satisfy reference by file (symbol)
 /usr/local/mcuxpressoide-10.1.1_606/ide/tools/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/libcr_c.a(memcpy.o)
                               /home/greg/Documents/CLIMER/Firmware/lpc_chip_11cxx_lib/Debug/liblpc_chip_11cxx_lib.a(ring_buffer.o) (memcpy)
 /usr/local/mcuxpressoide-10.1.1_606/ide/tools/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/libcr_c.a(memset.o)
-                              ./src/BNO_CAN.o (memset)
+                              ./src/SSD1306.o (memset)
 /usr/local/mcuxpressoide-10.1.1_606/ide/tools/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/libcr_c.a(__weak__main.o)
                               ./src/cr_startup_lpc11xx.o (__main)
 /usr/local/mcuxpressoide-10.1.1_606/ide/tools/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/libcr_c.a(cos.o)
@@ -80,8 +80,49 @@ Discarded input sections
  .text          0x0000000000000000        0x0 ./src/BNO055.o
  .data          0x0000000000000000        0x0 ./src/BNO055.o
  .bss           0x0000000000000000        0x0 ./src/BNO055.o
+ .text.init_BNO055
+                0x0000000000000000       0xfc ./src/BNO055.o
+ .text.get_Euler
+                0x0000000000000000       0x4c ./src/BNO055.o
  .text.get_Quaternion
                 0x0000000000000000       0x60 ./src/BNO055.o
+ .debug_info    0x0000000000000000      0x247 ./src/BNO055.o
+ .debug_abbrev  0x0000000000000000      0x139 ./src/BNO055.o
+ .debug_aranges
+                0x0000000000000000       0x30 ./src/BNO055.o
+ .debug_ranges  0x0000000000000000       0x20 ./src/BNO055.o
+ .debug_macro   0x0000000000000000      0x157 ./src/BNO055.o
+ .debug_macro   0x0000000000000000      0x8c2 ./src/BNO055.o
+ .debug_macro   0x0000000000000000       0x10 ./src/BNO055.o
+ .debug_macro   0x0000000000000000      0x12d ./src/BNO055.o
+ .debug_macro   0x0000000000000000      0x5b2 ./src/BNO055.o
+ .debug_macro   0x0000000000000000       0x70 ./src/BNO055.o
+ .debug_macro   0x0000000000000000       0x22 ./src/BNO055.o
+ .debug_macro   0x0000000000000000       0x7b ./src/BNO055.o
+ .debug_macro   0x0000000000000000       0x10 ./src/BNO055.o
+ .debug_macro   0x0000000000000000       0x1f ./src/BNO055.o
+ .debug_macro   0x0000000000000000       0x3a ./src/BNO055.o
+ .debug_macro   0x0000000000000000      0x241 ./src/BNO055.o
+ .debug_macro   0x0000000000000000      0x117 ./src/BNO055.o
+ .debug_macro   0x0000000000000000       0x22 ./src/BNO055.o
+ .debug_macro   0x0000000000000000       0xb2 ./src/BNO055.o
+ .debug_macro   0x0000000000000000       0x10 ./src/BNO055.o
+ .debug_macro   0x0000000000000000      0x137 ./src/BNO055.o
+ .debug_macro   0x0000000000000000       0x4c ./src/BNO055.o
+ .debug_macro   0x0000000000000000       0x16 ./src/BNO055.o
+ .debug_macro   0x0000000000000000      0x31a ./src/BNO055.o
+ .debug_macro   0x0000000000000000       0x2e ./src/BNO055.o
+ .debug_macro   0x0000000000000000       0xb8 ./src/BNO055.o
+ .debug_macro   0x0000000000000000       0x11 ./src/BNO055.o
+ .debug_macro   0x0000000000000000       0x7c ./src/BNO055.o
+ .debug_macro   0x0000000000000000      0x21c ./src/BNO055.o
+ .debug_macro   0x0000000000000000      0x113 ./src/BNO055.o
+ .debug_line    0x0000000000000000      0x37a ./src/BNO055.o
+ .debug_str     0x0000000000000000     0x80d4 ./src/BNO055.o
+ .comment       0x0000000000000000       0x80 ./src/BNO055.o
+ .debug_frame   0x0000000000000000       0x70 ./src/BNO055.o
+ .ARM.attributes
+                0x0000000000000000       0x31 ./src/BNO055.o
  .group         0x0000000000000000        0x8 ./src/BNO_CAN.o
  .group         0x0000000000000000        0x8 ./src/BNO_CAN.o
  .group         0x0000000000000000        0x8 ./src/BNO_CAN.o
@@ -114,10 +155,35 @@ Discarded input sections
  .text          0x0000000000000000        0x0 ./src/BNO_CAN.o
  .data          0x0000000000000000        0x0 ./src/BNO_CAN.o
  .bss           0x0000000000000000        0x0 ./src/BNO_CAN.o
+ .text.NVIC_EnableIRQ
+                0x0000000000000000       0x2c ./src/BNO_CAN.o
+ .text.NVIC_DisableIRQ
+                0x0000000000000000       0x30 ./src/BNO_CAN.o
+ .text.Chip_SYSCTL_AssertPeriphReset
+                0x0000000000000000       0x30 ./src/BNO_CAN.o
+ .text.Chip_SYSCTL_DeassertPeriphReset
+                0x0000000000000000       0x2c ./src/BNO_CAN.o
+ .text.Chip_SYSCTL_PeriphReset
+                0x0000000000000000       0x28 ./src/BNO_CAN.o
+ .text.Chip_IOCON_PinMuxSet
+                0x0000000000000000       0x28 ./src/BNO_CAN.o
  .bss.SSD1306_Buffer
                 0x0000000000000000      0x400 ./src/BNO_CAN.o
  .bss.SSD1306   0x0000000000000000        0x6 ./src/BNO_CAN.o
  .bss.data      0x0000000000000000        0x1 ./src/BNO_CAN.o
+ .bss.CanApiClkInitTable
+                0x0000000000000000        0x8 ./src/BNO_CAN.o
+ .bss.msg_obj   0x0000000000000000       0x14 ./src/BNO_CAN.o
+ .data.callbacks
+                0x0000000000000000       0x20 ./src/BNO_CAN.o
+ .text.I2C_Init
+                0x0000000000000000       0x58 ./src/BNO_CAN.o
+ .text.CAN_Init
+                0x0000000000000000      0x108 ./src/BNO_CAN.o
+ .text.CAN_rx   0x0000000000000000       0x5c ./src/BNO_CAN.o
+ .text.CAN_tx   0x0000000000000000       0x38 ./src/BNO_CAN.o
+ .text.CAN_error
+                0x0000000000000000       0x10 ./src/BNO_CAN.o
  .text.delay    0x0000000000000000       0x2a ./src/BNO_CAN.o
  .debug_macro   0x0000000000000000      0x8c2 ./src/BNO_CAN.o
  .debug_macro   0x0000000000000000       0x10 ./src/BNO_CAN.o
@@ -173,25 +239,61 @@ Discarded input sections
  .text          0x0000000000000000        0x0 ./src/SSD1306.o
  .data          0x0000000000000000        0x0 ./src/SSD1306.o
  .bss           0x0000000000000000        0x0 ./src/SSD1306.o
+ .bss.SSD1306_Buffer
+                0x0000000000000000      0x400 ./src/SSD1306.o
+ .bss.SSD1306   0x0000000000000000        0x6 ./src/SSD1306.o
+ .text.support_routine_I2C_Write_command
+                0x0000000000000000       0x3c ./src/SSD1306.o
+ .rodata        0x0000000000000000        0x7 ./src/SSD1306.o
+ .text.configure_SSD1306
+                0x0000000000000000      0x128 ./src/SSD1306.o
+ .text.SSD1306_Fill
+                0x0000000000000000       0x34 ./src/SSD1306.o
+ .text.SSD1306_UpdateOLED
+                0x0000000000000000       0x60 ./src/SSD1306.o
+ .text.write_multiple_SSD1306
+                0x0000000000000000       0x30 ./src/SSD1306.o
  .text.SSD1306_ToggleInvert
                 0x0000000000000000       0x5c ./src/SSD1306.o
+ .text.SSD1306_DrawPixel
+                0x0000000000000000       0xdc ./src/SSD1306.o
  .text.SSD1306_ON
                 0x0000000000000000       0x22 ./src/SSD1306.o
  .text.SSD1306_OFF
                 0x0000000000000000       0x22 ./src/SSD1306.o
+ .text.SSD1306_GotoXY
+                0x0000000000000000       0x30 ./src/SSD1306.o
+ .text.SSD1306_Putc
+                0x0000000000000000       0xf8 ./src/SSD1306.o
+ .text.SSD1306_Puts
+                0x0000000000000000       0x4c ./src/SSD1306.o
+ .text.SSD1306_DrawLine
+                0x0000000000000000      0x334 ./src/SSD1306.o
  .text.SSD1306_DrawTriangle
                 0x0000000000000000       0x90 ./src/SSD1306.o
  .text.SSD1306_DrawFilledTriangle
                 0x0000000000000000      0x2d6 ./src/SSD1306.o
  .text.SSD1306_DrawCircle
                 0x0000000000000000      0x29c ./src/SSD1306.o
+ .text.SSD1306_DrawFilledCircle
+                0x0000000000000000      0x2b0 ./src/SSD1306.o
+ .bss.config.6145
+                0x0000000000000000        0x2 ./src/SSD1306.o
+ .debug_info    0x0000000000000000      0x8ec ./src/SSD1306.o
+ .debug_abbrev  0x0000000000000000      0x1ef ./src/SSD1306.o
+ .debug_aranges
+                0x0000000000000000       0xa0 ./src/SSD1306.o
+ .debug_ranges  0x0000000000000000       0x90 ./src/SSD1306.o
+ .debug_macro   0x0000000000000000      0x195 ./src/SSD1306.o
  .debug_macro   0x0000000000000000      0x8c2 ./src/SSD1306.o
  .debug_macro   0x0000000000000000       0x10 ./src/SSD1306.o
  .debug_macro   0x0000000000000000      0x12d ./src/SSD1306.o
+ .debug_macro   0x0000000000000000       0xa0 ./src/SSD1306.o
  .debug_macro   0x0000000000000000       0x22 ./src/SSD1306.o
  .debug_macro   0x0000000000000000      0x5b2 ./src/SSD1306.o
  .debug_macro   0x0000000000000000       0x46 ./src/SSD1306.o
  .debug_macro   0x0000000000000000       0x22 ./src/SSD1306.o
+ .debug_macro   0x0000000000000000       0x74 ./src/SSD1306.o
  .debug_macro   0x0000000000000000       0x10 ./src/SSD1306.o
  .debug_macro   0x0000000000000000       0x1f ./src/SSD1306.o
  .debug_macro   0x0000000000000000       0x3a ./src/SSD1306.o
@@ -210,6 +312,12 @@ Discarded input sections
  .debug_macro   0x0000000000000000       0x7c ./src/SSD1306.o
  .debug_macro   0x0000000000000000      0x21c ./src/SSD1306.o
  .debug_macro   0x0000000000000000      0x113 ./src/SSD1306.o
+ .debug_line    0x0000000000000000      0x653 ./src/SSD1306.o
+ .debug_str     0x0000000000000000     0x856d ./src/SSD1306.o
+ .comment       0x0000000000000000       0x80 ./src/SSD1306.o
+ .debug_frame   0x0000000000000000      0x238 ./src/SSD1306.o
+ .ARM.attributes
+                0x0000000000000000       0x31 ./src/SSD1306.o
  .group         0x0000000000000000        0x8 ./src/cr_startup_lpc11xx.o
  .text          0x0000000000000000        0x0 ./src/cr_startup_lpc11xx.o
  .data          0x0000000000000000        0x0 ./src/cr_startup_lpc11xx.o
@@ -267,12 +375,43 @@ Discarded input sections
  .bss.SSD1306_Buffer
                 0x0000000000000000      0x400 ./src/cube.o
  .bss.SSD1306   0x0000000000000000        0x6 ./src/cube.o
+ .data.C1       0x0000000000000000       0x18 ./src/cube.o
+ .data.C2       0x0000000000000000       0x18 ./src/cube.o
+ .data.C3       0x0000000000000000       0x18 ./src/cube.o
+ .data.C4       0x0000000000000000       0x18 ./src/cube.o
+ .data.C5       0x0000000000000000       0x18 ./src/cube.o
+ .data.C6       0x0000000000000000       0x18 ./src/cube.o
+ .data.C7       0x0000000000000000       0x18 ./src/cube.o
+ .data.C8       0x0000000000000000       0x18 ./src/cube.o
+ .data.C1_home  0x0000000000000000       0x18 ./src/cube.o
+ .data.C2_home  0x0000000000000000       0x18 ./src/cube.o
+ .data.C3_home  0x0000000000000000       0x18 ./src/cube.o
+ .data.C4_home  0x0000000000000000       0x18 ./src/cube.o
+ .data.C5_home  0x0000000000000000       0x18 ./src/cube.o
+ .data.C6_home  0x0000000000000000       0x18 ./src/cube.o
+ .data.C7_home  0x0000000000000000       0x18 ./src/cube.o
+ .data.C8_home  0x0000000000000000       0x18 ./src/cube.o
+ .data.scale    0x0000000000000000        0x4 ./src/cube.o
+ .data.sZ       0x0000000000000000        0x4 ./src/cube.o
  .data.calX     0x0000000000000000        0x8 ./src/cube.o
  .data.calY     0x0000000000000000        0x8 ./src/cube.o
  .data.calZ     0x0000000000000000        0x8 ./src/cube.o
  .bss.rotX      0x0000000000000000        0x8 ./src/cube.o
  .bss.rotY      0x0000000000000000        0x8 ./src/cube.o
  .bss.rotZ      0x0000000000000000        0x8 ./src/cube.o
+ .text.vectRotX
+                0x0000000000000000      0x594 ./src/cube.o
+ .text.vectRotY
+                0x0000000000000000      0x65c ./src/cube.o
+ .text.vectRotZ
+                0x0000000000000000      0x63c ./src/cube.o
+ .text.cube     0x0000000000000000     0x1a44 ./src/cube.o
+ .debug_info    0x0000000000000000      0x581 ./src/cube.o
+ .debug_abbrev  0x0000000000000000      0x155 ./src/cube.o
+ .debug_aranges
+                0x0000000000000000       0x38 ./src/cube.o
+ .debug_ranges  0x0000000000000000       0x28 ./src/cube.o
+ .debug_macro   0x0000000000000000      0x1a8 ./src/cube.o
  .debug_macro   0x0000000000000000      0x8c2 ./src/cube.o
  .debug_macro   0x0000000000000000       0x10 ./src/cube.o
  .debug_macro   0x0000000000000000      0x12d ./src/cube.o
@@ -297,9 +436,16 @@ Discarded input sections
  .debug_macro   0x0000000000000000       0x7c ./src/cube.o
  .debug_macro   0x0000000000000000      0x21c ./src/cube.o
  .debug_macro   0x0000000000000000      0x113 ./src/cube.o
+ .debug_macro   0x0000000000000000       0xc4 ./src/cube.o
  .debug_macro   0x0000000000000000       0x9a ./src/cube.o
  .debug_macro   0x0000000000000000       0x22 ./src/cube.o
  .debug_macro   0x0000000000000000       0x46 ./src/cube.o
+ .debug_line    0x0000000000000000      0x46c ./src/cube.o
+ .debug_str     0x0000000000000000     0x892c ./src/cube.o
+ .comment       0x0000000000000000       0x80 ./src/cube.o
+ .debug_frame   0x0000000000000000       0xa8 ./src/cube.o
+ .ARM.attributes
+                0x0000000000000000       0x31 ./src/cube.o
  .group         0x0000000000000000        0x8 ./src/fonts.o
  .group         0x0000000000000000        0x8 ./src/fonts.o
  .group         0x0000000000000000        0x8 ./src/fonts.o
@@ -311,16 +457,32 @@ Discarded input sections
                 0x0000000000000000      0x76c ./src/fonts.o
  .rodata.Font11x18
                 0x0000000000000000      0xd5c ./src/fonts.o
+ .rodata.Font16x26
+                0x0000000000000000     0x134c ./src/fonts.o
  .data.Font_7x10
                 0x0000000000000000        0x8 ./src/fonts.o
  .data.Font_11x18
                 0x0000000000000000        0x8 ./src/fonts.o
+ .data.Font_16x26
+                0x0000000000000000        0x8 ./src/fonts.o
  .text.FONTS_GetStringSize
                 0x0000000000000000       0x3a ./src/fonts.o
+ .debug_info    0x0000000000000000      0x252 ./src/fonts.o
+ .debug_abbrev  0x0000000000000000       0xfe ./src/fonts.o
+ .debug_aranges
+                0x0000000000000000       0x20 ./src/fonts.o
+ .debug_ranges  0x0000000000000000       0x10 ./src/fonts.o
+ .debug_macro   0x0000000000000000       0x5a ./src/fonts.o
  .debug_macro   0x0000000000000000      0x8c2 ./src/fonts.o
  .debug_macro   0x0000000000000000       0x10 ./src/fonts.o
  .debug_macro   0x0000000000000000      0x12d ./src/fonts.o
  .debug_macro   0x0000000000000000      0x5b2 ./src/fonts.o
+ .debug_line    0x0000000000000000      0x15f ./src/fonts.o
+ .debug_str     0x0000000000000000     0x3cf6 ./src/fonts.o
+ .comment       0x0000000000000000       0x80 ./src/fonts.o
+ .debug_frame   0x0000000000000000       0x30 ./src/fonts.o
+ .ARM.attributes
+                0x0000000000000000       0x31 ./src/fonts.o
  .group         0x0000000000000000        0x8 ./src/sysinit.o
  .group         0x0000000000000000        0x8 ./src/sysinit.o
  .group         0x0000000000000000        0x8 ./src/sysinit.o
@@ -508,12 +670,27 @@ Discarded input sections
  .text          0x0000000000000000        0x0 /home/greg/Documents/CLIMER/Firmware/lpc_chip_11cxx_lib/Debug/liblpc_chip_11cxx_lib.a(i2c_11xx.o)
  .data          0x0000000000000000        0x0 /home/greg/Documents/CLIMER/Firmware/lpc_chip_11cxx_lib/Debug/liblpc_chip_11cxx_lib.a(i2c_11xx.o)
  .bss           0x0000000000000000        0x0 /home/greg/Documents/CLIMER/Firmware/lpc_chip_11cxx_lib/Debug/liblpc_chip_11cxx_lib.a(i2c_11xx.o)
+ .text.Chip_Clock_EnablePeriphClock
+                0x0000000000000000       0x30 /home/greg/Documents/CLIMER/Firmware/lpc_chip_11cxx_lib/Debug/liblpc_chip_11cxx_lib.a(i2c_11xx.o)
  .text.Chip_Clock_DisablePeriphClock
                 0x0000000000000000       0x34 /home/greg/Documents/CLIMER/Firmware/lpc_chip_11cxx_lib/Debug/liblpc_chip_11cxx_lib.a(i2c_11xx.o)
+ .data.i2c      0x0000000000000000       0x1c /home/greg/Documents/CLIMER/Firmware/lpc_chip_11cxx_lib/Debug/liblpc_chip_11cxx_lib.a(i2c_11xx.o)
  .bss.i2c_slave
                 0x0000000000000000       0x28 /home/greg/Documents/CLIMER/Firmware/lpc_chip_11cxx_lib/Debug/liblpc_chip_11cxx_lib.a(i2c_11xx.o)
+ .text.enableClk
+                0x0000000000000000       0x34 /home/greg/Documents/CLIMER/Firmware/lpc_chip_11cxx_lib/Debug/liblpc_chip_11cxx_lib.a(i2c_11xx.o)
  .text.disableClk
                 0x0000000000000000       0x34 /home/greg/Documents/CLIMER/Firmware/lpc_chip_11cxx_lib/Debug/liblpc_chip_11cxx_lib.a(i2c_11xx.o)
+ .text.getClkRate
+                0x0000000000000000       0x1a /home/greg/Documents/CLIMER/Firmware/lpc_chip_11cxx_lib/Debug/liblpc_chip_11cxx_lib.a(i2c_11xx.o)
+ .text.startMasterXfer
+                0x0000000000000000       0x1c /home/greg/Documents/CLIMER/Firmware/lpc_chip_11cxx_lib/Debug/liblpc_chip_11cxx_lib.a(i2c_11xx.o)
+ .text.startSlaverXfer
+                0x0000000000000000       0x1c /home/greg/Documents/CLIMER/Firmware/lpc_chip_11cxx_lib/Debug/liblpc_chip_11cxx_lib.a(i2c_11xx.o)
+ .text.isI2CBusFree
+                0x0000000000000000       0x1e /home/greg/Documents/CLIMER/Firmware/lpc_chip_11cxx_lib/Debug/liblpc_chip_11cxx_lib.a(i2c_11xx.o)
+ .text.getCurState
+                0x0000000000000000       0x1a /home/greg/Documents/CLIMER/Firmware/lpc_chip_11cxx_lib/Debug/liblpc_chip_11cxx_lib.a(i2c_11xx.o)
  .text.isMasterState
                 0x0000000000000000       0x28 /home/greg/Documents/CLIMER/Firmware/lpc_chip_11cxx_lib/Debug/liblpc_chip_11cxx_lib.a(i2c_11xx.o)
  .text.setSlaveAddr
@@ -522,28 +699,58 @@ Discarded input sections
                 0x0000000000000000       0x4e /home/greg/Documents/CLIMER/Firmware/lpc_chip_11cxx_lib/Debug/liblpc_chip_11cxx_lib.a(i2c_11xx.o)
  .text.lookupSlaveIndex
                 0x0000000000000000       0xa0 /home/greg/Documents/CLIMER/Firmware/lpc_chip_11cxx_lib/Debug/liblpc_chip_11cxx_lib.a(i2c_11xx.o)
+ .text.handleMasterXferState
+                0x0000000000000000      0x120 /home/greg/Documents/CLIMER/Firmware/lpc_chip_11cxx_lib/Debug/liblpc_chip_11cxx_lib.a(i2c_11xx.o)
+ .rodata.handleMasterXferState
+                0x0000000000000000      0x164 /home/greg/Documents/CLIMER/Firmware/lpc_chip_11cxx_lib/Debug/liblpc_chip_11cxx_lib.a(i2c_11xx.o)
  .text.getSlaveIndex
                 0x0000000000000000       0x4c /home/greg/Documents/CLIMER/Firmware/lpc_chip_11cxx_lib/Debug/liblpc_chip_11cxx_lib.a(i2c_11xx.o)
  .text.handleSlaveXferState
                 0x0000000000000000      0x118 /home/greg/Documents/CLIMER/Firmware/lpc_chip_11cxx_lib/Debug/liblpc_chip_11cxx_lib.a(i2c_11xx.o)
  .rodata.handleSlaveXferState
                 0x0000000000000000      0x1a4 /home/greg/Documents/CLIMER/Firmware/lpc_chip_11cxx_lib/Debug/liblpc_chip_11cxx_lib.a(i2c_11xx.o)
+ .text.Chip_I2C_EventHandler
+                0x0000000000000000       0x50 /home/greg/Documents/CLIMER/Firmware/lpc_chip_11cxx_lib/Debug/liblpc_chip_11cxx_lib.a(i2c_11xx.o)
+ .text.Chip_I2C_EventHandlerPolling
+                0x0000000000000000       0x68 /home/greg/Documents/CLIMER/Firmware/lpc_chip_11cxx_lib/Debug/liblpc_chip_11cxx_lib.a(i2c_11xx.o)
+ .text.Chip_I2C_Init
+                0x0000000000000000       0x38 /home/greg/Documents/CLIMER/Firmware/lpc_chip_11cxx_lib/Debug/liblpc_chip_11cxx_lib.a(i2c_11xx.o)
  .text.Chip_I2C_DeInit
                 0x0000000000000000       0x38 /home/greg/Documents/CLIMER/Firmware/lpc_chip_11cxx_lib/Debug/liblpc_chip_11cxx_lib.a(i2c_11xx.o)
+ .text.Chip_I2C_SetClockRate
+                0x0000000000000000       0x70 /home/greg/Documents/CLIMER/Firmware/lpc_chip_11cxx_lib/Debug/liblpc_chip_11cxx_lib.a(i2c_11xx.o)
  .text.Chip_I2C_GetClockRate
                 0x0000000000000000       0x54 /home/greg/Documents/CLIMER/Firmware/lpc_chip_11cxx_lib/Debug/liblpc_chip_11cxx_lib.a(i2c_11xx.o)
+ .text.Chip_I2C_SetMasterEventHandler
+                0x0000000000000000       0x48 /home/greg/Documents/CLIMER/Firmware/lpc_chip_11cxx_lib/Debug/liblpc_chip_11cxx_lib.a(i2c_11xx.o)
  .text.Chip_I2C_GetMasterEventHandler
                 0x0000000000000000       0x2c /home/greg/Documents/CLIMER/Firmware/lpc_chip_11cxx_lib/Debug/liblpc_chip_11cxx_lib.a(i2c_11xx.o)
+ .text.Chip_I2C_MasterTransfer
+                0x0000000000000000       0xa4 /home/greg/Documents/CLIMER/Firmware/lpc_chip_11cxx_lib/Debug/liblpc_chip_11cxx_lib.a(i2c_11xx.o)
+ .text.Chip_I2C_MasterSend
+                0x0000000000000000       0x78 /home/greg/Documents/CLIMER/Firmware/lpc_chip_11cxx_lib/Debug/liblpc_chip_11cxx_lib.a(i2c_11xx.o)
+ .text.Chip_I2C_MasterCmdRead
+                0x0000000000000000       0x84 /home/greg/Documents/CLIMER/Firmware/lpc_chip_11cxx_lib/Debug/liblpc_chip_11cxx_lib.a(i2c_11xx.o)
  .text.Chip_I2C_MasterRead
                 0x0000000000000000       0x72 /home/greg/Documents/CLIMER/Firmware/lpc_chip_11cxx_lib/Debug/liblpc_chip_11cxx_lib.a(i2c_11xx.o)
  .text.Chip_I2C_IsMasterActive
                 0x0000000000000000       0x30 /home/greg/Documents/CLIMER/Firmware/lpc_chip_11cxx_lib/Debug/liblpc_chip_11cxx_lib.a(i2c_11xx.o)
+ .text.Chip_I2C_MasterStateHandler
+                0x0000000000000000       0x64 /home/greg/Documents/CLIMER/Firmware/lpc_chip_11cxx_lib/Debug/liblpc_chip_11cxx_lib.a(i2c_11xx.o)
  .text.Chip_I2C_SlaveSetup
                 0x0000000000000000       0xc0 /home/greg/Documents/CLIMER/Firmware/lpc_chip_11cxx_lib/Debug/liblpc_chip_11cxx_lib.a(i2c_11xx.o)
  .text.Chip_I2C_SlaveStateHandler
                 0x0000000000000000       0xcc /home/greg/Documents/CLIMER/Firmware/lpc_chip_11cxx_lib/Debug/liblpc_chip_11cxx_lib.a(i2c_11xx.o)
  .text.Chip_I2C_Disable
                 0x0000000000000000       0x2c /home/greg/Documents/CLIMER/Firmware/lpc_chip_11cxx_lib/Debug/liblpc_chip_11cxx_lib.a(i2c_11xx.o)
+ .text.Chip_I2C_IsStateChanged
+                0x0000000000000000       0x34 /home/greg/Documents/CLIMER/Firmware/lpc_chip_11cxx_lib/Debug/liblpc_chip_11cxx_lib.a(i2c_11xx.o)
+ .debug_info    0x0000000000000000     0x10e6 /home/greg/Documents/CLIMER/Firmware/lpc_chip_11cxx_lib/Debug/liblpc_chip_11cxx_lib.a(i2c_11xx.o)
+ .debug_abbrev  0x0000000000000000      0x304 /home/greg/Documents/CLIMER/Firmware/lpc_chip_11cxx_lib/Debug/liblpc_chip_11cxx_lib.a(i2c_11xx.o)
+ .debug_aranges
+                0x0000000000000000      0x128 /home/greg/Documents/CLIMER/Firmware/lpc_chip_11cxx_lib/Debug/liblpc_chip_11cxx_lib.a(i2c_11xx.o)
+ .debug_ranges  0x0000000000000000      0x118 /home/greg/Documents/CLIMER/Firmware/lpc_chip_11cxx_lib/Debug/liblpc_chip_11cxx_lib.a(i2c_11xx.o)
+ .debug_macro   0x0000000000000000      0x15a /home/greg/Documents/CLIMER/Firmware/lpc_chip_11cxx_lib/Debug/liblpc_chip_11cxx_lib.a(i2c_11xx.o)
  .debug_macro   0x0000000000000000      0x8b0 /home/greg/Documents/CLIMER/Firmware/lpc_chip_11cxx_lib/Debug/liblpc_chip_11cxx_lib.a(i2c_11xx.o)
  .debug_macro   0x0000000000000000       0x10 /home/greg/Documents/CLIMER/Firmware/lpc_chip_11cxx_lib/Debug/liblpc_chip_11cxx_lib.a(i2c_11xx.o)
  .debug_macro   0x0000000000000000      0x12d /home/greg/Documents/CLIMER/Firmware/lpc_chip_11cxx_lib/Debug/liblpc_chip_11cxx_lib.a(i2c_11xx.o)
@@ -568,6 +775,12 @@ Discarded input sections
  .debug_macro   0x0000000000000000       0x7c /home/greg/Documents/CLIMER/Firmware/lpc_chip_11cxx_lib/Debug/liblpc_chip_11cxx_lib.a(i2c_11xx.o)
  .debug_macro   0x0000000000000000      0x21c /home/greg/Documents/CLIMER/Firmware/lpc_chip_11cxx_lib/Debug/liblpc_chip_11cxx_lib.a(i2c_11xx.o)
  .debug_macro   0x0000000000000000      0x113 /home/greg/Documents/CLIMER/Firmware/lpc_chip_11cxx_lib/Debug/liblpc_chip_11cxx_lib.a(i2c_11xx.o)
+ .debug_line    0x0000000000000000      0x634 /home/greg/Documents/CLIMER/Firmware/lpc_chip_11cxx_lib/Debug/liblpc_chip_11cxx_lib.a(i2c_11xx.o)
+ .debug_str     0x0000000000000000     0x8856 /home/greg/Documents/CLIMER/Firmware/lpc_chip_11cxx_lib/Debug/liblpc_chip_11cxx_lib.a(i2c_11xx.o)
+ .comment       0x0000000000000000       0x80 /home/greg/Documents/CLIMER/Firmware/lpc_chip_11cxx_lib/Debug/liblpc_chip_11cxx_lib.a(i2c_11xx.o)
+ .debug_frame   0x0000000000000000      0x450 /home/greg/Documents/CLIMER/Firmware/lpc_chip_11cxx_lib/Debug/liblpc_chip_11cxx_lib.a(i2c_11xx.o)
+ .ARM.attributes
+                0x0000000000000000       0x31 /home/greg/Documents/CLIMER/Firmware/lpc_chip_11cxx_lib/Debug/liblpc_chip_11cxx_lib.a(i2c_11xx.o)
  .group         0x0000000000000000        0x8 /home/greg/Documents/CLIMER/Firmware/lpc_chip_11cxx_lib/Debug/liblpc_chip_11cxx_lib.a(sysinit_11xx.o)
  .group         0x0000000000000000        0x8 /home/greg/Documents/CLIMER/Firmware/lpc_chip_11cxx_lib/Debug/liblpc_chip_11cxx_lib.a(sysinit_11xx.o)
  .group         0x0000000000000000        0x8 /home/greg/Documents/CLIMER/Firmware/lpc_chip_11cxx_lib/Debug/liblpc_chip_11cxx_lib.a(sysinit_11xx.o)
@@ -654,6 +867,8 @@ Discarded input sections
                 0x0000000000000000       0x1c /home/greg/Documents/CLIMER/Firmware/lpc_chip_11cxx_lib/Debug/liblpc_chip_11cxx_lib.a(uart_11xx.o)
  .text.RingBuffer_IsEmpty
                 0x0000000000000000       0x24 /home/greg/Documents/CLIMER/Firmware/lpc_chip_11cxx_lib/Debug/liblpc_chip_11cxx_lib.a(uart_11xx.o)
+ .text.Chip_UART_SendByte
+                0x0000000000000000       0x1e /home/greg/Documents/CLIMER/Firmware/lpc_chip_11cxx_lib/Debug/liblpc_chip_11cxx_lib.a(uart_11xx.o)
  .text.Chip_UART_ReadByte
                 0x0000000000000000       0x16 /home/greg/Documents/CLIMER/Firmware/lpc_chip_11cxx_lib/Debug/liblpc_chip_11cxx_lib.a(uart_11xx.o)
  .text.Chip_UART_IntEnable
@@ -670,10 +885,16 @@ Discarded input sections
                 0x0000000000000000       0x1e /home/greg/Documents/CLIMER/Firmware/lpc_chip_11cxx_lib/Debug/liblpc_chip_11cxx_lib.a(uart_11xx.o)
  .text.Chip_UART_SetDivisorLatches
                 0x0000000000000000       0x30 /home/greg/Documents/CLIMER/Firmware/lpc_chip_11cxx_lib/Debug/liblpc_chip_11cxx_lib.a(uart_11xx.o)
+ .text.Chip_UART_ReadLineStatus
+                0x0000000000000000       0x14 /home/greg/Documents/CLIMER/Firmware/lpc_chip_11cxx_lib/Debug/liblpc_chip_11cxx_lib.a(uart_11xx.o)
  .text.Chip_UART_Init
                 0x0000000000000000       0x36 /home/greg/Documents/CLIMER/Firmware/lpc_chip_11cxx_lib/Debug/liblpc_chip_11cxx_lib.a(uart_11xx.o)
  .text.Chip_UART_DeInit
                 0x0000000000000000       0x16 /home/greg/Documents/CLIMER/Firmware/lpc_chip_11cxx_lib/Debug/liblpc_chip_11cxx_lib.a(uart_11xx.o)
+ .text.Chip_UART_Send
+                0x0000000000000000       0x52 /home/greg/Documents/CLIMER/Firmware/lpc_chip_11cxx_lib/Debug/liblpc_chip_11cxx_lib.a(uart_11xx.o)
+ .text.Chip_UART_SendBlocking
+                0x0000000000000000       0x4e /home/greg/Documents/CLIMER/Firmware/lpc_chip_11cxx_lib/Debug/liblpc_chip_11cxx_lib.a(uart_11xx.o)
  .text.Chip_UART_Read
                 0x0000000000000000       0x54 /home/greg/Documents/CLIMER/Firmware/lpc_chip_11cxx_lib/Debug/liblpc_chip_11cxx_lib.a(uart_11xx.o)
  .text.Chip_UART_ReadBlocking
@@ -692,6 +913,12 @@ Discarded input sections
                 0x0000000000000000       0x4c /home/greg/Documents/CLIMER/Firmware/lpc_chip_11cxx_lib/Debug/liblpc_chip_11cxx_lib.a(uart_11xx.o)
  .text.Chip_UART_SetBaudFDR
                 0x0000000000000000       0xe0 /home/greg/Documents/CLIMER/Firmware/lpc_chip_11cxx_lib/Debug/liblpc_chip_11cxx_lib.a(uart_11xx.o)
+ .debug_info    0x0000000000000000      0xebf /home/greg/Documents/CLIMER/Firmware/lpc_chip_11cxx_lib/Debug/liblpc_chip_11cxx_lib.a(uart_11xx.o)
+ .debug_abbrev  0x0000000000000000      0x236 /home/greg/Documents/CLIMER/Firmware/lpc_chip_11cxx_lib/Debug/liblpc_chip_11cxx_lib.a(uart_11xx.o)
+ .debug_aranges
+                0x0000000000000000       0xf0 /home/greg/Documents/CLIMER/Firmware/lpc_chip_11cxx_lib/Debug/liblpc_chip_11cxx_lib.a(uart_11xx.o)
+ .debug_ranges  0x0000000000000000       0xe0 /home/greg/Documents/CLIMER/Firmware/lpc_chip_11cxx_lib/Debug/liblpc_chip_11cxx_lib.a(uart_11xx.o)
+ .debug_macro   0x0000000000000000      0x148 /home/greg/Documents/CLIMER/Firmware/lpc_chip_11cxx_lib/Debug/liblpc_chip_11cxx_lib.a(uart_11xx.o)
  .debug_macro   0x0000000000000000      0x8b0 /home/greg/Documents/CLIMER/Firmware/lpc_chip_11cxx_lib/Debug/liblpc_chip_11cxx_lib.a(uart_11xx.o)
  .debug_macro   0x0000000000000000       0x10 /home/greg/Documents/CLIMER/Firmware/lpc_chip_11cxx_lib/Debug/liblpc_chip_11cxx_lib.a(uart_11xx.o)
  .debug_macro   0x0000000000000000      0x12d /home/greg/Documents/CLIMER/Firmware/lpc_chip_11cxx_lib/Debug/liblpc_chip_11cxx_lib.a(uart_11xx.o)
@@ -716,6 +943,12 @@ Discarded input sections
  .debug_macro   0x0000000000000000       0x7c /home/greg/Documents/CLIMER/Firmware/lpc_chip_11cxx_lib/Debug/liblpc_chip_11cxx_lib.a(uart_11xx.o)
  .debug_macro   0x0000000000000000      0x21c /home/greg/Documents/CLIMER/Firmware/lpc_chip_11cxx_lib/Debug/liblpc_chip_11cxx_lib.a(uart_11xx.o)
  .debug_macro   0x0000000000000000      0x113 /home/greg/Documents/CLIMER/Firmware/lpc_chip_11cxx_lib/Debug/liblpc_chip_11cxx_lib.a(uart_11xx.o)
+ .debug_line    0x0000000000000000      0x526 /home/greg/Documents/CLIMER/Firmware/lpc_chip_11cxx_lib/Debug/liblpc_chip_11cxx_lib.a(uart_11xx.o)
+ .debug_str     0x0000000000000000     0x85d3 /home/greg/Documents/CLIMER/Firmware/lpc_chip_11cxx_lib/Debug/liblpc_chip_11cxx_lib.a(uart_11xx.o)
+ .comment       0x0000000000000000       0x80 /home/greg/Documents/CLIMER/Firmware/lpc_chip_11cxx_lib/Debug/liblpc_chip_11cxx_lib.a(uart_11xx.o)
+ .debug_frame   0x0000000000000000      0x370 /home/greg/Documents/CLIMER/Firmware/lpc_chip_11cxx_lib/Debug/liblpc_chip_11cxx_lib.a(uart_11xx.o)
+ .ARM.attributes
+                0x0000000000000000       0x31 /home/greg/Documents/CLIMER/Firmware/lpc_chip_11cxx_lib/Debug/liblpc_chip_11cxx_lib.a(uart_11xx.o)
  .group         0x0000000000000000        0x8 /home/greg/Documents/CLIMER/Firmware/lpc_chip_11cxx_lib/Debug/liblpc_chip_11cxx_lib.a(ring_buffer.o)
  .group         0x0000000000000000        0x8 /home/greg/Documents/CLIMER/Firmware/lpc_chip_11cxx_lib/Debug/liblpc_chip_11cxx_lib.a(ring_buffer.o)
  .group         0x0000000000000000        0x8 /home/greg/Documents/CLIMER/Firmware/lpc_chip_11cxx_lib/Debug/liblpc_chip_11cxx_lib.a(ring_buffer.o)
@@ -828,15 +1061,27 @@ Discarded input sections
  .text          0x0000000000000000        0x0 /usr/local/mcuxpressoide-10.1.1_606/ide/tools/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/libcr_c.a(memset.o)
  .data          0x0000000000000000        0x0 /usr/local/mcuxpressoide-10.1.1_606/ide/tools/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/libcr_c.a(memset.o)
  .bss           0x0000000000000000        0x0 /usr/local/mcuxpressoide-10.1.1_606/ide/tools/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/libcr_c.a(memset.o)
+ .text.memset   0x0000000000000000        0x8 /usr/local/mcuxpressoide-10.1.1_606/ide/tools/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/libcr_c.a(memset.o)
+ .comment       0x0000000000000000       0x80 /usr/local/mcuxpressoide-10.1.1_606/ide/tools/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/libcr_c.a(memset.o)
+ .ARM.attributes
+                0x0000000000000000       0x31 /usr/local/mcuxpressoide-10.1.1_606/ide/tools/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/libcr_c.a(memset.o)
  .text          0x0000000000000000        0x0 /usr/local/mcuxpressoide-10.1.1_606/ide/tools/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/libcr_c.a(__weak__main.o)
  .data          0x0000000000000000        0x0 /usr/local/mcuxpressoide-10.1.1_606/ide/tools/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/libcr_c.a(__weak__main.o)
  .bss           0x0000000000000000        0x0 /usr/local/mcuxpressoide-10.1.1_606/ide/tools/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/libcr_c.a(__weak__main.o)
  .text          0x0000000000000000        0x0 /usr/local/mcuxpressoide-10.1.1_606/ide/tools/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/libcr_c.a(cos.o)
  .data          0x0000000000000000        0x0 /usr/local/mcuxpressoide-10.1.1_606/ide/tools/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/libcr_c.a(cos.o)
  .bss           0x0000000000000000        0x0 /usr/local/mcuxpressoide-10.1.1_606/ide/tools/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/libcr_c.a(cos.o)
+ .text.cos      0x0000000000000000       0x5c /usr/local/mcuxpressoide-10.1.1_606/ide/tools/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/libcr_c.a(cos.o)
+ .comment       0x0000000000000000       0x80 /usr/local/mcuxpressoide-10.1.1_606/ide/tools/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/libcr_c.a(cos.o)
+ .ARM.attributes
+                0x0000000000000000       0x31 /usr/local/mcuxpressoide-10.1.1_606/ide/tools/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/libcr_c.a(cos.o)
  .text          0x0000000000000000        0x0 /usr/local/mcuxpressoide-10.1.1_606/ide/tools/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/libcr_c.a(sin.o)
  .data          0x0000000000000000        0x0 /usr/local/mcuxpressoide-10.1.1_606/ide/tools/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/libcr_c.a(sin.o)
  .bss           0x0000000000000000        0x0 /usr/local/mcuxpressoide-10.1.1_606/ide/tools/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/libcr_c.a(sin.o)
+ .text.sin      0x0000000000000000       0x36 /usr/local/mcuxpressoide-10.1.1_606/ide/tools/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/libcr_c.a(sin.o)
+ .comment       0x0000000000000000       0x80 /usr/local/mcuxpressoide-10.1.1_606/ide/tools/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/libcr_c.a(sin.o)
+ .ARM.attributes
+                0x0000000000000000       0x31 /usr/local/mcuxpressoide-10.1.1_606/ide/tools/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/libcr_c.a(sin.o)
  .text          0x0000000000000000        0x0 /usr/local/mcuxpressoide-10.1.1_606/ide/tools/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/libcr_c.a(strlen.o)
  .data          0x0000000000000000        0x0 /usr/local/mcuxpressoide-10.1.1_606/ide/tools/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/libcr_c.a(strlen.o)
  .bss           0x0000000000000000        0x0 /usr/local/mcuxpressoide-10.1.1_606/ide/tools/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/libcr_c.a(strlen.o)
@@ -847,17 +1092,34 @@ Discarded input sections
  .text          0x0000000000000000        0x0 /usr/local/mcuxpressoide-10.1.1_606/ide/tools/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/libcr_c.a(_sincos.o)
  .data          0x0000000000000000        0x0 /usr/local/mcuxpressoide-10.1.1_606/ide/tools/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/libcr_c.a(_sincos.o)
  .bss           0x0000000000000000        0x0 /usr/local/mcuxpressoide-10.1.1_606/ide/tools/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/libcr_c.a(_sincos.o)
+ .text._sincos  0x0000000000000000      0x1e8 /usr/local/mcuxpressoide-10.1.1_606/ide/tools/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/libcr_c.a(_sincos.o)
+ .comment       0x0000000000000000       0x80 /usr/local/mcuxpressoide-10.1.1_606/ide/tools/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/libcr_c.a(_sincos.o)
+ .ARM.attributes
+                0x0000000000000000       0x31 /usr/local/mcuxpressoide-10.1.1_606/ide/tools/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/libcr_c.a(_sincos.o)
  .text          0x0000000000000000        0x0 /usr/local/mcuxpressoide-10.1.1_606/ide/tools/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/libcr_c.a(errno.o)
  .data          0x0000000000000000        0x0 /usr/local/mcuxpressoide-10.1.1_606/ide/tools/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/libcr_c.a(errno.o)
  .bss           0x0000000000000000        0x0 /usr/local/mcuxpressoide-10.1.1_606/ide/tools/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/libcr_c.a(errno.o)
+ .bss.errno     0x0000000000000000        0x4 /usr/local/mcuxpressoide-10.1.1_606/ide/tools/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/libcr_c.a(errno.o)
+ .comment       0x0000000000000000       0x80 /usr/local/mcuxpressoide-10.1.1_606/ide/tools/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/libcr_c.a(errno.o)
+ .ARM.attributes
+                0x0000000000000000       0x31 /usr/local/mcuxpressoide-10.1.1_606/ide/tools/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/libcr_c.a(errno.o)
  .text          0x0000000000000000        0x0 /usr/local/mcuxpressoide-10.1.1_606/ide/tools/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/libcr_c.a(fabs.o)
  .data          0x0000000000000000        0x0 /usr/local/mcuxpressoide-10.1.1_606/ide/tools/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/libcr_c.a(fabs.o)
  .bss           0x0000000000000000        0x0 /usr/local/mcuxpressoide-10.1.1_606/ide/tools/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/libcr_c.a(fabs.o)
+ .text.fabs     0x0000000000000000       0x22 /usr/local/mcuxpressoide-10.1.1_606/ide/tools/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/libcr_c.a(fabs.o)
+ .comment       0x0000000000000000       0x80 /usr/local/mcuxpressoide-10.1.1_606/ide/tools/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/libcr_c.a(fabs.o)
+ .ARM.attributes
+                0x0000000000000000       0x31 /usr/local/mcuxpressoide-10.1.1_606/ide/tools/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/libcr_c.a(fabs.o)
  .text          0x0000000000000000        0x0 /usr/local/mcuxpressoide-10.1.1_606/ide/tools/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/libcr_c.a(_hugeval.o)
  .data          0x0000000000000000        0x0 /usr/local/mcuxpressoide-10.1.1_606/ide/tools/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/libcr_c.a(_hugeval.o)
  .bss           0x0000000000000000        0x0 /usr/local/mcuxpressoide-10.1.1_606/ide/tools/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/libcr_c.a(_hugeval.o)
+ .rodata.__huge_val
+                0x0000000000000000        0x8 /usr/local/mcuxpressoide-10.1.1_606/ide/tools/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/libcr_c.a(_hugeval.o)
  .rodata.__huge_vall
                 0x0000000000000000        0x8 /usr/local/mcuxpressoide-10.1.1_606/ide/tools/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/libcr_c.a(_hugeval.o)
+ .comment       0x0000000000000000       0x80 /usr/local/mcuxpressoide-10.1.1_606/ide/tools/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/libcr_c.a(_hugeval.o)
+ .ARM.attributes
+                0x0000000000000000       0x31 /usr/local/mcuxpressoide-10.1.1_606/ide/tools/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/libcr_c.a(_hugeval.o)
  .text          0x0000000000000000        0x0 /usr/local/mcuxpressoide-10.1.1_606/ide/tools/bin/../lib/gcc/arm-none-eabi/6.3.1/thumb/v6-m/libcr_eabihelpers.a(division_32.o)
  .data          0x0000000000000000        0x0 /usr/local/mcuxpressoide-10.1.1_606/ide/tools/bin/../lib/gcc/arm-none-eabi/6.3.1/thumb/v6-m/libcr_eabihelpers.a(division_32.o)
  .bss           0x0000000000000000        0x0 /usr/local/mcuxpressoide-10.1.1_606/ide/tools/bin/../lib/gcc/arm-none-eabi/6.3.1/thumb/v6-m/libcr_eabihelpers.a(division_32.o)
@@ -867,18 +1129,34 @@ Discarded input sections
  .text          0x0000000000000000        0x0 /usr/local/mcuxpressoide-10.1.1_606/ide/tools/bin/../lib/gcc/arm-none-eabi/6.3.1/thumb/v6-m/libcr_eabihelpers.a(double.o)
  .data          0x0000000000000000        0x0 /usr/local/mcuxpressoide-10.1.1_606/ide/tools/bin/../lib/gcc/arm-none-eabi/6.3.1/thumb/v6-m/libcr_eabihelpers.a(double.o)
  .bss           0x0000000000000000        0x0 /usr/local/mcuxpressoide-10.1.1_606/ide/tools/bin/../lib/gcc/arm-none-eabi/6.3.1/thumb/v6-m/libcr_eabihelpers.a(double.o)
+ .text.__aeabi_dmul
+                0x0000000000000000      0x180 /usr/local/mcuxpressoide-10.1.1_606/ide/tools/bin/../lib/gcc/arm-none-eabi/6.3.1/thumb/v6-m/libcr_eabihelpers.a(double.o)
+ .text.__aeabi_ddiv
+                0x0000000000000000      0x14c /usr/local/mcuxpressoide-10.1.1_606/ide/tools/bin/../lib/gcc/arm-none-eabi/6.3.1/thumb/v6-m/libcr_eabihelpers.a(double.o)
+ .text.__aeabi_dsub
+                0x0000000000000000      0x1e8 /usr/local/mcuxpressoide-10.1.1_606/ide/tools/bin/../lib/gcc/arm-none-eabi/6.3.1/thumb/v6-m/libcr_eabihelpers.a(double.o)
+ .text.__aeabi_dadd
+                0x0000000000000000      0x130 /usr/local/mcuxpressoide-10.1.1_606/ide/tools/bin/../lib/gcc/arm-none-eabi/6.3.1/thumb/v6-m/libcr_eabihelpers.a(double.o)
  .text.__aeabi_drsub
                 0x0000000000000000       0x18 /usr/local/mcuxpressoide-10.1.1_606/ide/tools/bin/../lib/gcc/arm-none-eabi/6.3.1/thumb/v6-m/libcr_eabihelpers.a(double.o)
  .text.__aeabi_dneg
                 0x0000000000000000        0xc /usr/local/mcuxpressoide-10.1.1_606/ide/tools/bin/../lib/gcc/arm-none-eabi/6.3.1/thumb/v6-m/libcr_eabihelpers.a(double.o)
  .text.__aeabi_d2f
                 0x0000000000000000       0x60 /usr/local/mcuxpressoide-10.1.1_606/ide/tools/bin/../lib/gcc/arm-none-eabi/6.3.1/thumb/v6-m/libcr_eabihelpers.a(double.o)
+ .text.__aeabi_d2iz
+                0x0000000000000000       0x44 /usr/local/mcuxpressoide-10.1.1_606/ide/tools/bin/../lib/gcc/arm-none-eabi/6.3.1/thumb/v6-m/libcr_eabihelpers.a(double.o)
+ .text.__aeabi_d2uiz
+                0x0000000000000000       0x34 /usr/local/mcuxpressoide-10.1.1_606/ide/tools/bin/../lib/gcc/arm-none-eabi/6.3.1/thumb/v6-m/libcr_eabihelpers.a(double.o)
  .text.__aeabi_d2lz
                 0x0000000000000000       0x7c /usr/local/mcuxpressoide-10.1.1_606/ide/tools/bin/../lib/gcc/arm-none-eabi/6.3.1/thumb/v6-m/libcr_eabihelpers.a(double.o)
  .text.__aeabi_d2ulz
                 0x0000000000000000       0x58 /usr/local/mcuxpressoide-10.1.1_606/ide/tools/bin/../lib/gcc/arm-none-eabi/6.3.1/thumb/v6-m/libcr_eabihelpers.a(double.o)
+ .text.__bhs_ui2d
+                0x0000000000000000       0x5e /usr/local/mcuxpressoide-10.1.1_606/ide/tools/bin/../lib/gcc/arm-none-eabi/6.3.1/thumb/v6-m/libcr_eabihelpers.a(double.o)
  .text.__bhs_ul2d
                 0x0000000000000000       0xb4 /usr/local/mcuxpressoide-10.1.1_606/ide/tools/bin/../lib/gcc/arm-none-eabi/6.3.1/thumb/v6-m/libcr_eabihelpers.a(double.o)
+ .text.__aeabi_i2d
+                0x0000000000000000       0x18 /usr/local/mcuxpressoide-10.1.1_606/ide/tools/bin/../lib/gcc/arm-none-eabi/6.3.1/thumb/v6-m/libcr_eabihelpers.a(double.o)
  .text.__aeabi_ui2d
                 0x0000000000000000        0xc /usr/local/mcuxpressoide-10.1.1_606/ide/tools/bin/../lib/gcc/arm-none-eabi/6.3.1/thumb/v6-m/libcr_eabihelpers.a(double.o)
  .text.__aeabi_l2d
@@ -887,19 +1165,28 @@ Discarded input sections
                 0x0000000000000000        0xc /usr/local/mcuxpressoide-10.1.1_606/ide/tools/bin/../lib/gcc/arm-none-eabi/6.3.1/thumb/v6-m/libcr_eabihelpers.a(double.o)
  .text.__aeabi_dcmpeq
                 0x0000000000000000       0x30 /usr/local/mcuxpressoide-10.1.1_606/ide/tools/bin/../lib/gcc/arm-none-eabi/6.3.1/thumb/v6-m/libcr_eabihelpers.a(double.o)
+ .text.__aeabi_dcmplt
+                0x0000000000000000       0x5c /usr/local/mcuxpressoide-10.1.1_606/ide/tools/bin/../lib/gcc/arm-none-eabi/6.3.1/thumb/v6-m/libcr_eabihelpers.a(double.o)
  .text.__aeabi_dcmpgt
                 0x0000000000000000       0x5c /usr/local/mcuxpressoide-10.1.1_606/ide/tools/bin/../lib/gcc/arm-none-eabi/6.3.1/thumb/v6-m/libcr_eabihelpers.a(double.o)
  .text.__aeabi_dcmple
                 0x0000000000000000       0x5c /usr/local/mcuxpressoide-10.1.1_606/ide/tools/bin/../lib/gcc/arm-none-eabi/6.3.1/thumb/v6-m/libcr_eabihelpers.a(double.o)
+ .text.__aeabi_dcmpge
+                0x0000000000000000       0x60 /usr/local/mcuxpressoide-10.1.1_606/ide/tools/bin/../lib/gcc/arm-none-eabi/6.3.1/thumb/v6-m/libcr_eabihelpers.a(double.o)
  .text.__aeabi_dcmpun
                 0x0000000000000000       0x18 /usr/local/mcuxpressoide-10.1.1_606/ide/tools/bin/../lib/gcc/arm-none-eabi/6.3.1/thumb/v6-m/libcr_eabihelpers.a(double.o)
  .text.__aeabi_cdcmple
                 0x0000000000000000       0x2e /usr/local/mcuxpressoide-10.1.1_606/ide/tools/bin/../lib/gcc/arm-none-eabi/6.3.1/thumb/v6-m/libcr_eabihelpers.a(double.o)
  .text.__aeabi_cdrcmple
                 0x0000000000000000       0x14 /usr/local/mcuxpressoide-10.1.1_606/ide/tools/bin/../lib/gcc/arm-none-eabi/6.3.1/thumb/v6-m/libcr_eabihelpers.a(double.o)
+ .comment       0x0000000000000000       0x80 /usr/local/mcuxpressoide-10.1.1_606/ide/tools/bin/../lib/gcc/arm-none-eabi/6.3.1/thumb/v6-m/libcr_eabihelpers.a(double.o)
+ .ARM.attributes
+                0x0000000000000000       0x31 /usr/local/mcuxpressoide-10.1.1_606/ide/tools/bin/../lib/gcc/arm-none-eabi/6.3.1/thumb/v6-m/libcr_eabihelpers.a(double.o)
  .text          0x0000000000000000        0x0 /usr/local/mcuxpressoide-10.1.1_606/ide/tools/bin/../lib/gcc/arm-none-eabi/6.3.1/thumb/v6-m/libcr_eabihelpers.a(llong.o)
  .data          0x0000000000000000        0x0 /usr/local/mcuxpressoide-10.1.1_606/ide/tools/bin/../lib/gcc/arm-none-eabi/6.3.1/thumb/v6-m/libcr_eabihelpers.a(llong.o)
  .bss           0x0000000000000000        0x0 /usr/local/mcuxpressoide-10.1.1_606/ide/tools/bin/../lib/gcc/arm-none-eabi/6.3.1/thumb/v6-m/libcr_eabihelpers.a(llong.o)
+ .text.__aeabi_llong_lmul
+                0x0000000000000000       0x2e /usr/local/mcuxpressoide-10.1.1_606/ide/tools/bin/../lib/gcc/arm-none-eabi/6.3.1/thumb/v6-m/libcr_eabihelpers.a(llong.o)
  .text.__aeabi_llong_llsl
                 0x0000000000000000       0x18 /usr/local/mcuxpressoide-10.1.1_606/ide/tools/bin/../lib/gcc/arm-none-eabi/6.3.1/thumb/v6-m/libcr_eabihelpers.a(llong.o)
  .text.__aeabi_llong_llsr
@@ -910,6 +1197,8 @@ Discarded input sections
                 0x0000000000000000       0x14 /usr/local/mcuxpressoide-10.1.1_606/ide/tools/bin/../lib/gcc/arm-none-eabi/6.3.1/thumb/v6-m/libcr_eabihelpers.a(llong.o)
  .text.__aeabi_llong_ulcmp
                 0x0000000000000000       0x10 /usr/local/mcuxpressoide-10.1.1_606/ide/tools/bin/../lib/gcc/arm-none-eabi/6.3.1/thumb/v6-m/libcr_eabihelpers.a(llong.o)
+ .ARM.attributes
+                0x0000000000000000       0x21 /usr/local/mcuxpressoide-10.1.1_606/ide/tools/bin/../lib/gcc/arm-none-eabi/6.3.1/thumb/v6-m/libcr_eabihelpers.a(llong.o)
  .text          0x0000000000000000        0x0 /usr/local/mcuxpressoide-10.1.1_606/ide/tools/bin/../lib/gcc/arm-none-eabi/6.3.1/thumb/v6-m/libcr_eabihelpers.a(memcpy.o)
  .data          0x0000000000000000        0x0 /usr/local/mcuxpressoide-10.1.1_606/ide/tools/bin/../lib/gcc/arm-none-eabi/6.3.1/thumb/v6-m/libcr_eabihelpers.a(memcpy.o)
  .bss           0x0000000000000000        0x0 /usr/local/mcuxpressoide-10.1.1_606/ide/tools/bin/../lib/gcc/arm-none-eabi/6.3.1/thumb/v6-m/libcr_eabihelpers.a(memcpy.o)
@@ -917,10 +1206,14 @@ Discarded input sections
                 0x0000000000000000       0x2c /usr/local/mcuxpressoide-10.1.1_606/ide/tools/bin/../lib/gcc/arm-none-eabi/6.3.1/thumb/v6-m/libcr_eabihelpers.a(memcpy.o)
  .text.__aeabi_memmove
                 0x0000000000000000       0x1c /usr/local/mcuxpressoide-10.1.1_606/ide/tools/bin/../lib/gcc/arm-none-eabi/6.3.1/thumb/v6-m/libcr_eabihelpers.a(memcpy.o)
+ .text.__aeabi_memset_lowlevel
+                0x0000000000000000       0x2a /usr/local/mcuxpressoide-10.1.1_606/ide/tools/bin/../lib/gcc/arm-none-eabi/6.3.1/thumb/v6-m/libcr_eabihelpers.a(memcpy.o)
  .text.__aeabi_memclr
                 0x0000000000000000        0x6 /usr/local/mcuxpressoide-10.1.1_606/ide/tools/bin/../lib/gcc/arm-none-eabi/6.3.1/thumb/v6-m/libcr_eabihelpers.a(memcpy.o)
  .text.__aeabi_memset
                 0x0000000000000000        0x8 /usr/local/mcuxpressoide-10.1.1_606/ide/tools/bin/../lib/gcc/arm-none-eabi/6.3.1/thumb/v6-m/libcr_eabihelpers.a(memcpy.o)
+ .ARM.attributes
+                0x0000000000000000       0x21 /usr/local/mcuxpressoide-10.1.1_606/ide/tools/bin/../lib/gcc/arm-none-eabi/6.3.1/thumb/v6-m/libcr_eabihelpers.a(memcpy.o)
 
 Memory Configuration
 
@@ -958,7 +1251,7 @@ END GROUP
                 0x0000000010000100                __top_RAM_00 = 0x10000100
                 0x0000000010000100                __top_RAM2 = 0x10000100
 
-.text           0x0000000000000000     0x6a38
+.text           0x0000000000000000      0x798
  FILL mask 0xff
                 0x0000000000000000                __vectors_start__ = ABSOLUTE (.)
  *(.isr_vector)
@@ -967,16 +1260,16 @@ END GROUP
                 0x00000000000000c0                . = ALIGN (0x4)
                 0x00000000000000c0                __section_table_start = .
                 0x00000000000000c0                __data_section_table = .
-                0x00000000000000c0        0x4 LONG 0x6a38 LOADADDR (.data)
+                0x00000000000000c0        0x4 LONG 0x798 LOADADDR (.data)
                 0x00000000000000c4        0x4 LONG 0x10000100 ADDR (.data)
-                0x00000000000000c8        0x4 LONG 0x1cc SIZEOF (.data)
-                0x00000000000000cc        0x4 LONG 0x6a38 LOADADDR (.data_RAM2)
+                0x00000000000000c8        0x4 LONG 0x0 SIZEOF (.data)
+                0x00000000000000cc        0x4 LONG 0x798 LOADADDR (.data_RAM2)
                 0x00000000000000d0        0x4 LONG 0x10000000 ADDR (.data_RAM2)
                 0x00000000000000d4        0x4 LONG 0x0 SIZEOF (.data_RAM2)
                 0x00000000000000d8                __data_section_table_end = .
                 0x00000000000000d8                __bss_section_table = .
-                0x00000000000000d8        0x4 LONG 0x100002cc ADDR (.bss)
-                0x00000000000000dc        0x4 LONG 0x430 SIZEOF (.bss)
+                0x00000000000000d8        0x4 LONG 0x10000100 ADDR (.bss)
+                0x00000000000000dc        0x4 LONG 0x4 SIZEOF (.bss)
                 0x00000000000000e0        0x4 LONG 0x10000000 ADDR (.bss_RAM2)
                 0x00000000000000e4        0x4 LONG 0x0 SIZEOF (.bss_RAM2)
                 0x00000000000000e8                __bss_section_table_end = .
@@ -1010,311 +1303,124 @@ END GROUP
                 0x00000000000001fa                WDT_IRQHandler
                 0x00000000000001fa                PIOINT3_IRQHandler
  *(.text*)
- .text.init_BNO055
-                0x0000000000000200       0xfc ./src/BNO055.o
-                0x0000000000000200                init_BNO055
- .text.get_Euler
-                0x00000000000002fc       0x4c ./src/BNO055.o
-                0x00000000000002fc                get_Euler
- .text.NVIC_EnableIRQ
-                0x0000000000000348       0x2c ./src/BNO_CAN.o
- .text.NVIC_DisableIRQ
-                0x0000000000000374       0x30 ./src/BNO_CAN.o
- .text.Chip_SYSCTL_AssertPeriphReset
-                0x00000000000003a4       0x30 ./src/BNO_CAN.o
- .text.Chip_SYSCTL_DeassertPeriphReset
-                0x00000000000003d4       0x2c ./src/BNO_CAN.o
- .text.Chip_SYSCTL_PeriphReset
-                0x0000000000000400       0x28 ./src/BNO_CAN.o
- .text.Chip_IOCON_PinMuxSet
-                0x0000000000000428       0x28 ./src/BNO_CAN.o
- .text.main     0x0000000000000450      0x1d0 ./src/BNO_CAN.o
-                0x0000000000000450                main
- .text.I2C_Init
-                0x0000000000000620       0x58 ./src/BNO_CAN.o
-                0x0000000000000620                I2C_Init
- .text.CAN_Init
-                0x0000000000000678      0x108 ./src/BNO_CAN.o
-                0x0000000000000678                CAN_Init
+ .text.main     0x0000000000000200       0x5e ./src/BNO_CAN.o
+                0x0000000000000200                main
+ *fill*         0x000000000000025e        0x2 ff
  .text.CAN_IRQHandler
-                0x0000000000000780       0x18 ./src/BNO_CAN.o
-                0x0000000000000780                CAN_IRQHandler
- .text.CAN_rx   0x0000000000000798       0x5c ./src/BNO_CAN.o
-                0x0000000000000798                CAN_rx
- .text.CAN_tx   0x00000000000007f4       0x38 ./src/BNO_CAN.o
-                0x00000000000007f4                CAN_tx
- .text.CAN_error
-                0x000000000000082c       0x10 ./src/BNO_CAN.o
-                0x000000000000082c                CAN_error
+                0x0000000000000260       0x18 ./src/BNO_CAN.o
+                0x0000000000000260                CAN_IRQHandler
  .text.LED_Init
-                0x000000000000083c       0x54 ./src/BNO_CAN.o
-                0x000000000000083c                LED_Init
+                0x0000000000000278       0x54 ./src/BNO_CAN.o
+                0x0000000000000278                LED_Init
  .text.LED_setvalue
-                0x0000000000000890       0x40 ./src/BNO_CAN.o
-                0x0000000000000890                LED_setvalue
- .text.support_routine_I2C_Write_command
-                0x00000000000008d0       0x3c ./src/SSD1306.o
-                0x00000000000008d0                support_routine_I2C_Write_command
- .text.configure_SSD1306
-                0x000000000000090c      0x128 ./src/SSD1306.o
-                0x000000000000090c                configure_SSD1306
- .text.SSD1306_Fill
-                0x0000000000000a34       0x34 ./src/SSD1306.o
-                0x0000000000000a34                SSD1306_Fill
- .text.SSD1306_UpdateOLED
-                0x0000000000000a68       0x60 ./src/SSD1306.o
-                0x0000000000000a68                SSD1306_UpdateOLED
- .text.write_multiple_SSD1306
-                0x0000000000000ac8       0x30 ./src/SSD1306.o
-                0x0000000000000ac8                write_multiple_SSD1306
- .text.SSD1306_DrawPixel
-                0x0000000000000af8       0xdc ./src/SSD1306.o
-                0x0000000000000af8                SSD1306_DrawPixel
- .text.SSD1306_GotoXY
-                0x0000000000000bd4       0x30 ./src/SSD1306.o
-                0x0000000000000bd4                SSD1306_GotoXY
- .text.SSD1306_Putc
-                0x0000000000000c04       0xf8 ./src/SSD1306.o
-                0x0000000000000c04                SSD1306_Putc
- .text.SSD1306_Puts
-                0x0000000000000cfc       0x4c ./src/SSD1306.o
-                0x0000000000000cfc                SSD1306_Puts
- .text.SSD1306_DrawLine
-                0x0000000000000d48      0x334 ./src/SSD1306.o
-                0x0000000000000d48                SSD1306_DrawLine
- .text.SSD1306_DrawFilledCircle
-                0x000000000000107c      0x2b0 ./src/SSD1306.o
-                0x000000000000107c                SSD1306_DrawFilledCircle
- .text.vectRotX
-                0x000000000000132c      0x594 ./src/cube.o
- .text.vectRotY
-                0x00000000000018c0      0x65c ./src/cube.o
- .text.vectRotZ
-                0x0000000000001f1c      0x63c ./src/cube.o
- .text.cube     0x0000000000002558     0x1a44 ./src/cube.o
-                0x0000000000002558                cube
+                0x00000000000002cc       0x40 ./src/BNO_CAN.o
+                0x00000000000002cc                LED_setvalue
  .text.SystemInit
-                0x0000000000003f9c        0xe ./src/sysinit.o
-                0x0000000000003f9c                SystemInit
- *fill*         0x0000000000003faa        0x2 ff
+                0x000000000000030c        0xe ./src/sysinit.o
+                0x000000000000030c                SystemInit
+ *fill*         0x000000000000031a        0x2 ff
  .text.SystemCoreClockUpdate
-                0x0000000000003fac       0x18 /home/greg/Documents/CLIMER/Firmware/lpc_chip_11cxx_lib/Debug/liblpc_chip_11cxx_lib.a(chip_11xx.o)
-                0x0000000000003fac                SystemCoreClockUpdate
+                0x000000000000031c       0x18 /home/greg/Documents/CLIMER/Firmware/lpc_chip_11cxx_lib/Debug/liblpc_chip_11cxx_lib.a(chip_11xx.o)
+                0x000000000000031c                SystemCoreClockUpdate
  .text.Chip_Clock_GetMainOscRate
-                0x0000000000003fc4       0x14 /home/greg/Documents/CLIMER/Firmware/lpc_chip_11cxx_lib/Debug/liblpc_chip_11cxx_lib.a(clock_11xx.o)
+                0x0000000000000334       0x14 /home/greg/Documents/CLIMER/Firmware/lpc_chip_11cxx_lib/Debug/liblpc_chip_11cxx_lib.a(clock_11xx.o)
  .text.Chip_Clock_GetIntOscRate
-                0x0000000000003fd8       0x10 /home/greg/Documents/CLIMER/Firmware/lpc_chip_11cxx_lib/Debug/liblpc_chip_11cxx_lib.a(clock_11xx.o)
+                0x0000000000000348       0x10 /home/greg/Documents/CLIMER/Firmware/lpc_chip_11cxx_lib/Debug/liblpc_chip_11cxx_lib.a(clock_11xx.o)
  .text.Chip_Clock_GetWDTLFORate
-                0x0000000000003fe8       0x48 /home/greg/Documents/CLIMER/Firmware/lpc_chip_11cxx_lib/Debug/liblpc_chip_11cxx_lib.a(clock_11xx.o)
+                0x0000000000000358       0x48 /home/greg/Documents/CLIMER/Firmware/lpc_chip_11cxx_lib/Debug/liblpc_chip_11cxx_lib.a(clock_11xx.o)
  .text.Chip_Clock_GetPLLFreq
-                0x0000000000004030       0x22 /home/greg/Documents/CLIMER/Firmware/lpc_chip_11cxx_lib/Debug/liblpc_chip_11cxx_lib.a(clock_11xx.o)
- *fill*         0x0000000000004052        0x2 ff
+                0x00000000000003a0       0x22 /home/greg/Documents/CLIMER/Firmware/lpc_chip_11cxx_lib/Debug/liblpc_chip_11cxx_lib.a(clock_11xx.o)
+ *fill*         0x00000000000003c2        0x2 ff
  .text.Chip_Clock_SetSystemPLLSource
-                0x0000000000004054       0x2c /home/greg/Documents/CLIMER/Firmware/lpc_chip_11cxx_lib/Debug/liblpc_chip_11cxx_lib.a(clock_11xx.o)
-                0x0000000000004054                Chip_Clock_SetSystemPLLSource
+                0x00000000000003c4       0x2c /home/greg/Documents/CLIMER/Firmware/lpc_chip_11cxx_lib/Debug/liblpc_chip_11cxx_lib.a(clock_11xx.o)
+                0x00000000000003c4                Chip_Clock_SetSystemPLLSource
  .text.Chip_Clock_SetMainClockSource
-                0x0000000000004080       0x2c /home/greg/Documents/CLIMER/Firmware/lpc_chip_11cxx_lib/Debug/liblpc_chip_11cxx_lib.a(clock_11xx.o)
-                0x0000000000004080                Chip_Clock_SetMainClockSource
+                0x00000000000003f0       0x2c /home/greg/Documents/CLIMER/Firmware/lpc_chip_11cxx_lib/Debug/liblpc_chip_11cxx_lib.a(clock_11xx.o)
+                0x00000000000003f0                Chip_Clock_SetMainClockSource
  .text.Chip_Clock_GetWDTOSCRate
-                0x00000000000040ac       0x1c /home/greg/Documents/CLIMER/Firmware/lpc_chip_11cxx_lib/Debug/liblpc_chip_11cxx_lib.a(clock_11xx.o)
-                0x00000000000040ac                Chip_Clock_GetWDTOSCRate
+                0x000000000000041c       0x1c /home/greg/Documents/CLIMER/Firmware/lpc_chip_11cxx_lib/Debug/liblpc_chip_11cxx_lib.a(clock_11xx.o)
+                0x000000000000041c                Chip_Clock_GetWDTOSCRate
  .text.Chip_Clock_GetSystemPLLInClockRate
-                0x00000000000040c8       0x40 /home/greg/Documents/CLIMER/Firmware/lpc_chip_11cxx_lib/Debug/liblpc_chip_11cxx_lib.a(clock_11xx.o)
-                0x00000000000040c8                Chip_Clock_GetSystemPLLInClockRate
+                0x0000000000000438       0x40 /home/greg/Documents/CLIMER/Firmware/lpc_chip_11cxx_lib/Debug/liblpc_chip_11cxx_lib.a(clock_11xx.o)
+                0x0000000000000438                Chip_Clock_GetSystemPLLInClockRate
  .text.Chip_Clock_GetSystemPLLOutClockRate
-                0x0000000000004108       0x24 /home/greg/Documents/CLIMER/Firmware/lpc_chip_11cxx_lib/Debug/liblpc_chip_11cxx_lib.a(clock_11xx.o)
-                0x0000000000004108                Chip_Clock_GetSystemPLLOutClockRate
+                0x0000000000000478       0x24 /home/greg/Documents/CLIMER/Firmware/lpc_chip_11cxx_lib/Debug/liblpc_chip_11cxx_lib.a(clock_11xx.o)
+                0x0000000000000478                Chip_Clock_GetSystemPLLOutClockRate
  .text.Chip_Clock_GetMainClockRate
-                0x000000000000412c       0x64 /home/greg/Documents/CLIMER/Firmware/lpc_chip_11cxx_lib/Debug/liblpc_chip_11cxx_lib.a(clock_11xx.o)
-                0x000000000000412c                Chip_Clock_GetMainClockRate
+                0x000000000000049c       0x64 /home/greg/Documents/CLIMER/Firmware/lpc_chip_11cxx_lib/Debug/liblpc_chip_11cxx_lib.a(clock_11xx.o)
+                0x000000000000049c                Chip_Clock_GetMainClockRate
  .text.Chip_Clock_GetSystemClockRate
-                0x0000000000004190       0x24 /home/greg/Documents/CLIMER/Firmware/lpc_chip_11cxx_lib/Debug/liblpc_chip_11cxx_lib.a(clock_11xx.o)
-                0x0000000000004190                Chip_Clock_GetSystemClockRate
- .text.Chip_Clock_EnablePeriphClock
-                0x00000000000041b4       0x30 /home/greg/Documents/CLIMER/Firmware/lpc_chip_11cxx_lib/Debug/liblpc_chip_11cxx_lib.a(i2c_11xx.o)
- .text.enableClk
-                0x00000000000041e4       0x34 /home/greg/Documents/CLIMER/Firmware/lpc_chip_11cxx_lib/Debug/liblpc_chip_11cxx_lib.a(i2c_11xx.o)
- .text.getClkRate
-                0x0000000000004218       0x1a /home/greg/Documents/CLIMER/Firmware/lpc_chip_11cxx_lib/Debug/liblpc_chip_11cxx_lib.a(i2c_11xx.o)
- .text.startMasterXfer
-                0x0000000000004232       0x1c /home/greg/Documents/CLIMER/Firmware/lpc_chip_11cxx_lib/Debug/liblpc_chip_11cxx_lib.a(i2c_11xx.o)
- .text.startSlaverXfer
-                0x000000000000424e       0x1c /home/greg/Documents/CLIMER/Firmware/lpc_chip_11cxx_lib/Debug/liblpc_chip_11cxx_lib.a(i2c_11xx.o)
- .text.isI2CBusFree
-                0x000000000000426a       0x1e /home/greg/Documents/CLIMER/Firmware/lpc_chip_11cxx_lib/Debug/liblpc_chip_11cxx_lib.a(i2c_11xx.o)
- .text.getCurState
-                0x0000000000004288       0x1a /home/greg/Documents/CLIMER/Firmware/lpc_chip_11cxx_lib/Debug/liblpc_chip_11cxx_lib.a(i2c_11xx.o)
- *fill*         0x00000000000042a2        0x2 ff
- .text.handleMasterXferState
-                0x00000000000042a4      0x120 /home/greg/Documents/CLIMER/Firmware/lpc_chip_11cxx_lib/Debug/liblpc_chip_11cxx_lib.a(i2c_11xx.o)
-                0x00000000000042a4                handleMasterXferState
- .text.Chip_I2C_EventHandler
-                0x00000000000043c4       0x50 /home/greg/Documents/CLIMER/Firmware/lpc_chip_11cxx_lib/Debug/liblpc_chip_11cxx_lib.a(i2c_11xx.o)
-                0x00000000000043c4                Chip_I2C_EventHandler
- .text.Chip_I2C_EventHandlerPolling
-                0x0000000000004414       0x68 /home/greg/Documents/CLIMER/Firmware/lpc_chip_11cxx_lib/Debug/liblpc_chip_11cxx_lib.a(i2c_11xx.o)
-                0x0000000000004414                Chip_I2C_EventHandlerPolling
- .text.Chip_I2C_Init
-                0x000000000000447c       0x38 /home/greg/Documents/CLIMER/Firmware/lpc_chip_11cxx_lib/Debug/liblpc_chip_11cxx_lib.a(i2c_11xx.o)
-                0x000000000000447c                Chip_I2C_Init
- .text.Chip_I2C_SetClockRate
-                0x00000000000044b4       0x70 /home/greg/Documents/CLIMER/Firmware/lpc_chip_11cxx_lib/Debug/liblpc_chip_11cxx_lib.a(i2c_11xx.o)
-                0x00000000000044b4                Chip_I2C_SetClockRate
- .text.Chip_I2C_SetMasterEventHandler
-                0x0000000000004524       0x48 /home/greg/Documents/CLIMER/Firmware/lpc_chip_11cxx_lib/Debug/liblpc_chip_11cxx_lib.a(i2c_11xx.o)
-                0x0000000000004524                Chip_I2C_SetMasterEventHandler
- .text.Chip_I2C_MasterTransfer
-                0x000000000000456c       0xa4 /home/greg/Documents/CLIMER/Firmware/lpc_chip_11cxx_lib/Debug/liblpc_chip_11cxx_lib.a(i2c_11xx.o)
-                0x000000000000456c                Chip_I2C_MasterTransfer
- .text.Chip_I2C_MasterSend
-                0x0000000000004610       0x78 /home/greg/Documents/CLIMER/Firmware/lpc_chip_11cxx_lib/Debug/liblpc_chip_11cxx_lib.a(i2c_11xx.o)
-                0x0000000000004610                Chip_I2C_MasterSend
- .text.Chip_I2C_MasterCmdRead
-                0x0000000000004688       0x84 /home/greg/Documents/CLIMER/Firmware/lpc_chip_11cxx_lib/Debug/liblpc_chip_11cxx_lib.a(i2c_11xx.o)
-                0x0000000000004688                Chip_I2C_MasterCmdRead
- .text.Chip_I2C_MasterStateHandler
-                0x000000000000470c       0x64 /home/greg/Documents/CLIMER/Firmware/lpc_chip_11cxx_lib/Debug/liblpc_chip_11cxx_lib.a(i2c_11xx.o)
-                0x000000000000470c                Chip_I2C_MasterStateHandler
- .text.Chip_I2C_IsStateChanged
-                0x0000000000004770       0x34 /home/greg/Documents/CLIMER/Firmware/lpc_chip_11cxx_lib/Debug/liblpc_chip_11cxx_lib.a(i2c_11xx.o)
-                0x0000000000004770                Chip_I2C_IsStateChanged
+                0x0000000000000500       0x24 /home/greg/Documents/CLIMER/Firmware/lpc_chip_11cxx_lib/Debug/liblpc_chip_11cxx_lib.a(clock_11xx.o)
+                0x0000000000000500                Chip_Clock_GetSystemClockRate
  .text.Chip_FMC_SetFLASHAccess
-                0x00000000000047a4       0x30 /home/greg/Documents/CLIMER/Firmware/lpc_chip_11cxx_lib/Debug/liblpc_chip_11cxx_lib.a(sysinit_11xx.o)
+                0x0000000000000524       0x30 /home/greg/Documents/CLIMER/Firmware/lpc_chip_11cxx_lib/Debug/liblpc_chip_11cxx_lib.a(sysinit_11xx.o)
  .text.Chip_Clock_SetupSystemPLL
-                0x00000000000047d4       0x38 /home/greg/Documents/CLIMER/Firmware/lpc_chip_11cxx_lib/Debug/liblpc_chip_11cxx_lib.a(sysinit_11xx.o)
+                0x0000000000000554       0x38 /home/greg/Documents/CLIMER/Firmware/lpc_chip_11cxx_lib/Debug/liblpc_chip_11cxx_lib.a(sysinit_11xx.o)
  .text.Chip_Clock_IsSystemPLLLocked
-                0x000000000000480c       0x1c /home/greg/Documents/CLIMER/Firmware/lpc_chip_11cxx_lib/Debug/liblpc_chip_11cxx_lib.a(sysinit_11xx.o)
+                0x000000000000058c       0x1c /home/greg/Documents/CLIMER/Firmware/lpc_chip_11cxx_lib/Debug/liblpc_chip_11cxx_lib.a(sysinit_11xx.o)
  .text.Chip_Clock_SetSysClockDiv
-                0x0000000000004828       0x1c /home/greg/Documents/CLIMER/Firmware/lpc_chip_11cxx_lib/Debug/liblpc_chip_11cxx_lib.a(sysinit_11xx.o)
+                0x00000000000005a8       0x1c /home/greg/Documents/CLIMER/Firmware/lpc_chip_11cxx_lib/Debug/liblpc_chip_11cxx_lib.a(sysinit_11xx.o)
  .text.Chip_Clock_EnablePeriphClock
-                0x0000000000004844       0x30 /home/greg/Documents/CLIMER/Firmware/lpc_chip_11cxx_lib/Debug/liblpc_chip_11cxx_lib.a(sysinit_11xx.o)
+                0x00000000000005c4       0x30 /home/greg/Documents/CLIMER/Firmware/lpc_chip_11cxx_lib/Debug/liblpc_chip_11cxx_lib.a(sysinit_11xx.o)
  .text.Chip_SystemInit
-                0x0000000000004874       0x5c /home/greg/Documents/CLIMER/Firmware/lpc_chip_11cxx_lib/Debug/liblpc_chip_11cxx_lib.a(sysinit_11xx.o)
-                0x0000000000004874                Chip_SystemInit
- .text.Chip_UART_SendByte
-                0x00000000000048d0       0x1e /home/greg/Documents/CLIMER/Firmware/lpc_chip_11cxx_lib/Debug/liblpc_chip_11cxx_lib.a(uart_11xx.o)
- .text.Chip_UART_ReadLineStatus
-                0x00000000000048ee       0x14 /home/greg/Documents/CLIMER/Firmware/lpc_chip_11cxx_lib/Debug/liblpc_chip_11cxx_lib.a(uart_11xx.o)
- .text.Chip_UART_Send
-                0x0000000000004902       0x52 /home/greg/Documents/CLIMER/Firmware/lpc_chip_11cxx_lib/Debug/liblpc_chip_11cxx_lib.a(uart_11xx.o)
-                0x0000000000004902                Chip_UART_Send
- .text.Chip_UART_SendBlocking
-                0x0000000000004954       0x4e /home/greg/Documents/CLIMER/Firmware/lpc_chip_11cxx_lib/Debug/liblpc_chip_11cxx_lib.a(uart_11xx.o)
-                0x0000000000004954                Chip_UART_SendBlocking
- *fill*         0x00000000000049a2        0x2 ff
+                0x00000000000005f4       0x5c /home/greg/Documents/CLIMER/Firmware/lpc_chip_11cxx_lib/Debug/liblpc_chip_11cxx_lib.a(sysinit_11xx.o)
+                0x00000000000005f4                Chip_SystemInit
  .text.Chip_SYSCTL_PowerDown
-                0x00000000000049a4       0x40 /home/greg/Documents/CLIMER/Firmware/lpc_chip_11cxx_lib/Debug/liblpc_chip_11cxx_lib.a(sysctl_11xx.o)
-                0x00000000000049a4                Chip_SYSCTL_PowerDown
+                0x0000000000000650       0x40 /home/greg/Documents/CLIMER/Firmware/lpc_chip_11cxx_lib/Debug/liblpc_chip_11cxx_lib.a(sysctl_11xx.o)
+                0x0000000000000650                Chip_SYSCTL_PowerDown
  .text.Chip_SYSCTL_PowerUp
-                0x00000000000049e4       0x40 /home/greg/Documents/CLIMER/Firmware/lpc_chip_11cxx_lib/Debug/liblpc_chip_11cxx_lib.a(sysctl_11xx.o)
-                0x00000000000049e4                Chip_SYSCTL_PowerUp
- .text.memset   0x0000000000004a24        0x8 /usr/local/mcuxpressoide-10.1.1_606/ide/tools/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/libcr_c.a(memset.o)
-                0x0000000000004a24                memset
+                0x0000000000000690       0x40 /home/greg/Documents/CLIMER/Firmware/lpc_chip_11cxx_lib/Debug/liblpc_chip_11cxx_lib.a(sysctl_11xx.o)
+                0x0000000000000690                Chip_SYSCTL_PowerUp
  .text.__weak_main
-                0x0000000000004a2c        0x8 /usr/local/mcuxpressoide-10.1.1_606/ide/tools/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/libcr_c.a(__weak__main.o)
-                0x0000000000004a2c                __main
-                0x0000000000004a2c                __weak_main
- .text.cos      0x0000000000004a34       0x5c /usr/local/mcuxpressoide-10.1.1_606/ide/tools/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/libcr_c.a(cos.o)
-                0x0000000000004a34                cos
- .text.sin      0x0000000000004a90       0x36 /usr/local/mcuxpressoide-10.1.1_606/ide/tools/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/libcr_c.a(sin.o)
-                0x0000000000004a90                sin
- *fill*         0x0000000000004ac6        0x2 ff
- .text._sincos  0x0000000000004ac8      0x1e8 /usr/local/mcuxpressoide-10.1.1_606/ide/tools/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/libcr_c.a(_sincos.o)
-                0x0000000000004ac8                _sincos
- .text.fabs     0x0000000000004cb0       0x22 /usr/local/mcuxpressoide-10.1.1_606/ide/tools/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/libcr_c.a(fabs.o)
-                0x0000000000004cb0                fabs
+                0x00000000000006d0        0x8 /usr/local/mcuxpressoide-10.1.1_606/ide/tools/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/libcr_c.a(__weak__main.o)
+                0x00000000000006d0                __main
+                0x00000000000006d0                __weak_main
  .text.__aeabi_division_idivmod
-                0x0000000000004cd2       0x78 /usr/local/mcuxpressoide-10.1.1_606/ide/tools/bin/../lib/gcc/arm-none-eabi/6.3.1/thumb/v6-m/libcr_eabihelpers.a(division_32.o)
-                0x0000000000004cd2                __aeabi_idiv
-                0x0000000000004cd2                __aeabi_idivmod
-                0x0000000000004cd8                __aeabi_uidiv
-                0x0000000000004cd8                __aeabi_uidivmod
+                0x00000000000006d8       0x78 /usr/local/mcuxpressoide-10.1.1_606/ide/tools/bin/../lib/gcc/arm-none-eabi/6.3.1/thumb/v6-m/libcr_eabihelpers.a(division_32.o)
+                0x00000000000006d8                __aeabi_idiv
+                0x00000000000006d8                __aeabi_idivmod
+                0x00000000000006de                __aeabi_uidiv
+                0x00000000000006de                __aeabi_uidivmod
  .text.__aeabi_division_idiv0
-                0x0000000000004d4a        0x2 /usr/local/mcuxpressoide-10.1.1_606/ide/tools/bin/../lib/gcc/arm-none-eabi/6.3.1/thumb/v6-m/libcr_eabihelpers.a(division_idiv0.o)
-                0x0000000000004d4a                __aeabi_idiv0
- .text.__aeabi_dmul
-                0x0000000000004d4c      0x180 /usr/local/mcuxpressoide-10.1.1_606/ide/tools/bin/../lib/gcc/arm-none-eabi/6.3.1/thumb/v6-m/libcr_eabihelpers.a(double.o)
-                0x0000000000004d4c                __aeabi_dmul
- .text.__aeabi_ddiv
-                0x0000000000004ecc      0x14c /usr/local/mcuxpressoide-10.1.1_606/ide/tools/bin/../lib/gcc/arm-none-eabi/6.3.1/thumb/v6-m/libcr_eabihelpers.a(double.o)
-                0x0000000000004ecc                __aeabi_ddiv
- .text.__aeabi_dsub
-                0x0000000000005018      0x1e8 /usr/local/mcuxpressoide-10.1.1_606/ide/tools/bin/../lib/gcc/arm-none-eabi/6.3.1/thumb/v6-m/libcr_eabihelpers.a(double.o)
-                0x0000000000005018                __aeabi_dsub
- .text.__aeabi_dadd
-                0x0000000000005200      0x130 /usr/local/mcuxpressoide-10.1.1_606/ide/tools/bin/../lib/gcc/arm-none-eabi/6.3.1/thumb/v6-m/libcr_eabihelpers.a(double.o)
-                0x0000000000005200                __aeabi_dadd
- .text.__aeabi_d2iz
-                0x0000000000005330       0x44 /usr/local/mcuxpressoide-10.1.1_606/ide/tools/bin/../lib/gcc/arm-none-eabi/6.3.1/thumb/v6-m/libcr_eabihelpers.a(double.o)
-                0x0000000000005330                __aeabi_d2iz
- .text.__aeabi_d2uiz
-                0x0000000000005374       0x34 /usr/local/mcuxpressoide-10.1.1_606/ide/tools/bin/../lib/gcc/arm-none-eabi/6.3.1/thumb/v6-m/libcr_eabihelpers.a(double.o)
-                0x0000000000005374                __aeabi_d2uiz
- .text.__bhs_ui2d
-                0x00000000000053a8       0x5e /usr/local/mcuxpressoide-10.1.1_606/ide/tools/bin/../lib/gcc/arm-none-eabi/6.3.1/thumb/v6-m/libcr_eabihelpers.a(double.o)
-                0x00000000000053a8                __bhs_ui2d
- .text.__aeabi_i2d
-                0x0000000000005406       0x18 /usr/local/mcuxpressoide-10.1.1_606/ide/tools/bin/../lib/gcc/arm-none-eabi/6.3.1/thumb/v6-m/libcr_eabihelpers.a(double.o)
-                0x0000000000005406                __aeabi_i2d
- *fill*         0x000000000000541e        0x2 ff
- .text.__aeabi_dcmplt
-                0x0000000000005420       0x5c /usr/local/mcuxpressoide-10.1.1_606/ide/tools/bin/../lib/gcc/arm-none-eabi/6.3.1/thumb/v6-m/libcr_eabihelpers.a(double.o)
-                0x0000000000005420                __aeabi_dcmplt
- .text.__aeabi_dcmpge
-                0x000000000000547c       0x60 /usr/local/mcuxpressoide-10.1.1_606/ide/tools/bin/../lib/gcc/arm-none-eabi/6.3.1/thumb/v6-m/libcr_eabihelpers.a(double.o)
-                0x000000000000547c                __aeabi_dcmpge
- .text.__aeabi_llong_lmul
-                0x00000000000054dc       0x2e /usr/local/mcuxpressoide-10.1.1_606/ide/tools/bin/../lib/gcc/arm-none-eabi/6.3.1/thumb/v6-m/libcr_eabihelpers.a(llong.o)
-                0x00000000000054dc                __aeabi_lmul
- .text.__aeabi_memset_lowlevel
-                0x000000000000550a       0x2a /usr/local/mcuxpressoide-10.1.1_606/ide/tools/bin/../lib/gcc/arm-none-eabi/6.3.1/thumb/v6-m/libcr_eabihelpers.a(memcpy.o)
-                0x000000000000550a                __aeabi_lowlevel_memset
+                0x0000000000000750        0x2 /usr/local/mcuxpressoide-10.1.1_606/ide/tools/bin/../lib/gcc/arm-none-eabi/6.3.1/thumb/v6-m/libcr_eabihelpers.a(division_idiv0.o)
+                0x0000000000000750                __aeabi_idiv0
  *(.rodata .rodata.* .constdata .constdata.*)
- .rodata        0x0000000000005534        0x7 ./src/SSD1306.o
- *fill*         0x000000000000553b        0x1 ff
- .rodata.Font16x26
-                0x000000000000553c     0x134c ./src/fonts.o
-                0x000000000000553c                Font16x26
+ *fill*         0x0000000000000752        0x2 ff
  .rodata.OscRateIn
-                0x0000000000006888        0x4 ./src/sysinit.o
-                0x0000000000006888                OscRateIn
+                0x0000000000000754        0x4 ./src/sysinit.o
+                0x0000000000000754                OscRateIn
  .rodata.wdtOSCRate
-                0x000000000000688c       0x40 /home/greg/Documents/CLIMER/Firmware/lpc_chip_11cxx_lib/Debug/liblpc_chip_11cxx_lib.a(clock_11xx.o)
- .rodata.handleMasterXferState
-                0x00000000000068cc      0x164 /home/greg/Documents/CLIMER/Firmware/lpc_chip_11cxx_lib/Debug/liblpc_chip_11cxx_lib.a(i2c_11xx.o)
- .rodata.__huge_val
-                0x0000000000006a30        0x8 /usr/local/mcuxpressoide-10.1.1_606/ide/tools/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/libcr_c.a(_hugeval.o)
-                0x0000000000006a30                __huge_val
-                0x0000000000006a38                . = ALIGN (0x4)
+                0x0000000000000758       0x40 /home/greg/Documents/CLIMER/Firmware/lpc_chip_11cxx_lib/Debug/liblpc_chip_11cxx_lib.a(clock_11xx.o)
+                0x0000000000000798                . = ALIGN (0x4)
 
-.glue_7         0x0000000000006a38        0x0
- .glue_7        0x0000000000006a38        0x0 linker stubs
+.glue_7         0x0000000000000798        0x0
+ .glue_7        0x0000000000000798        0x0 linker stubs
 
-.glue_7t        0x0000000000006a38        0x0
- .glue_7t       0x0000000000006a38        0x0 linker stubs
+.glue_7t        0x0000000000000798        0x0
+ .glue_7t       0x0000000000000798        0x0 linker stubs
 
-.vfp11_veneer   0x0000000000006a38        0x0
- .vfp11_veneer  0x0000000000006a38        0x0 linker stubs
+.vfp11_veneer   0x0000000000000798        0x0
+ .vfp11_veneer  0x0000000000000798        0x0 linker stubs
 
-.v4_bx          0x0000000000006a38        0x0
- .v4_bx         0x0000000000006a38        0x0 linker stubs
+.v4_bx          0x0000000000000798        0x0
+ .v4_bx         0x0000000000000798        0x0 linker stubs
 
-.iplt           0x0000000000006a38        0x0
- .iplt          0x0000000000006a38        0x0 ./src/BNO055.o
+.iplt           0x0000000000000798        0x0
+ .iplt          0x0000000000000798        0x0 ./src/BNO055.o
 
-.rel.dyn        0x0000000000006a38        0x0
- .rel.iplt      0x0000000000006a38        0x0 ./src/BNO055.o
+.rel.dyn        0x0000000000000798        0x0
+ .rel.iplt      0x0000000000000798        0x0 ./src/BNO055.o
 
 .ARM.extab
  *(.ARM.extab* .gnu.linkonce.armextab.*)
-                0x0000000000006a38                __exidx_start = .
+                0x0000000000000798                __exidx_start = .
 
 .ARM.exidx
  *(.ARM.exidx* .gnu.linkonce.armexidx.*)
-                0x0000000000006a38                __exidx_end = .
-                0x0000000000006a38                _etext = .
+                0x0000000000000798                __exidx_end = .
+                0x0000000000000798                _etext = .
 
-.data_RAM2      0x0000000010000000        0x0 load address 0x0000000000006a38
+.data_RAM2      0x0000000010000000        0x0 load address 0x0000000000000798
  FILL mask 0xff
                 [!provide]                        PROVIDE (__start_data_RAM2, .)
  *(.ramfunc.$RAM2)
@@ -1330,60 +1436,17 @@ END GROUP
                 0x0000000010000100                . = ALIGN (0x4)
                 0x0000000010000100                _end_uninit_RESERVED = .
 
-.data           0x0000000010000100      0x1cc load address 0x0000000000006a38
+.data           0x0000000010000100        0x0 load address 0x0000000000000798
  FILL mask 0xff
                 0x0000000010000100                _data = .
  *(vtable)
  *(.ramfunc*)
  *(.data*)
- .data.callbacks
-                0x0000000010000100       0x20 ./src/BNO_CAN.o
-                0x0000000010000100                callbacks
- .data.C1       0x0000000010000120       0x18 ./src/cube.o
-                0x0000000010000120                C1
- .data.C2       0x0000000010000138       0x18 ./src/cube.o
-                0x0000000010000138                C2
- .data.C3       0x0000000010000150       0x18 ./src/cube.o
-                0x0000000010000150                C3
- .data.C4       0x0000000010000168       0x18 ./src/cube.o
-                0x0000000010000168                C4
- .data.C5       0x0000000010000180       0x18 ./src/cube.o
-                0x0000000010000180                C5
- .data.C6       0x0000000010000198       0x18 ./src/cube.o
-                0x0000000010000198                C6
- .data.C7       0x00000000100001b0       0x18 ./src/cube.o
-                0x00000000100001b0                C7
- .data.C8       0x00000000100001c8       0x18 ./src/cube.o
-                0x00000000100001c8                C8
- .data.C1_home  0x00000000100001e0       0x18 ./src/cube.o
-                0x00000000100001e0                C1_home
- .data.C2_home  0x00000000100001f8       0x18 ./src/cube.o
-                0x00000000100001f8                C2_home
- .data.C3_home  0x0000000010000210       0x18 ./src/cube.o
-                0x0000000010000210                C3_home
- .data.C4_home  0x0000000010000228       0x18 ./src/cube.o
-                0x0000000010000228                C4_home
- .data.C5_home  0x0000000010000240       0x18 ./src/cube.o
-                0x0000000010000240                C5_home
- .data.C6_home  0x0000000010000258       0x18 ./src/cube.o
-                0x0000000010000258                C6_home
- .data.C7_home  0x0000000010000270       0x18 ./src/cube.o
-                0x0000000010000270                C7_home
- .data.C8_home  0x0000000010000288       0x18 ./src/cube.o
-                0x0000000010000288                C8_home
- .data.scale    0x00000000100002a0        0x4 ./src/cube.o
-                0x00000000100002a0                scale
- .data.sZ       0x00000000100002a4        0x4 ./src/cube.o
-                0x00000000100002a4                sZ
- .data.Font_16x26
-                0x00000000100002a8        0x8 ./src/fonts.o
-                0x00000000100002a8                Font_16x26
- .data.i2c      0x00000000100002b0       0x1c /home/greg/Documents/CLIMER/Firmware/lpc_chip_11cxx_lib/Debug/liblpc_chip_11cxx_lib.a(i2c_11xx.o)
-                0x00000000100002cc                . = ALIGN (0x4)
-                0x00000000100002cc                _edata = .
+                0x0000000010000100                . = ALIGN (0x4)
+                0x0000000010000100                _edata = .
 
-.igot.plt       0x00000000100002cc        0x0 load address 0x0000000000006c04
- .igot.plt      0x00000000100002cc        0x0 ./src/BNO055.o
+.igot.plt       0x0000000010000100        0x0 load address 0x0000000000000798
+ .igot.plt      0x0000000010000100        0x0 ./src/BNO055.o
 
 .bss_RAM2       0x0000000010000000        0x0
                 [!provide]                        PROVIDE (__start_bss_RAM2, .)
@@ -1392,28 +1455,14 @@ END GROUP
                 0x0000000010000000                . = ALIGN ((. != 0x0)?0x4:0x1)
                 [!provide]                        PROVIDE (__end_bss_RAM2, .)
 
-.bss            0x00000000100002cc      0x430
-                0x00000000100002cc                _bss = .
+.bss            0x0000000010000100        0x4
+                0x0000000010000100                _bss = .
  *(.bss*)
- .bss.CanApiClkInitTable
-                0x00000000100002cc        0x8 ./src/BNO_CAN.o
-                0x00000000100002cc                CanApiClkInitTable
- .bss.msg_obj   0x00000000100002d4       0x14 ./src/BNO_CAN.o
-                0x00000000100002d4                msg_obj
- .bss.SSD1306_Buffer
-                0x00000000100002e8      0x400 ./src/SSD1306.o
- .bss.SSD1306   0x00000000100006e8        0x6 ./src/SSD1306.o
- *fill*         0x00000000100006ee        0x2 
- .bss.config.6145
-                0x00000000100006f0        0x2 ./src/SSD1306.o
- *fill*         0x00000000100006f2        0x2 
- .bss.errno     0x00000000100006f4        0x4 /usr/local/mcuxpressoide-10.1.1_606/ide/tools/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/libcr_c.a(errno.o)
-                0x00000000100006f4                errno
  *(COMMON)
- COMMON         0x00000000100006f8        0x4 /home/greg/Documents/CLIMER/Firmware/lpc_chip_11cxx_lib/Debug/liblpc_chip_11cxx_lib.a(chip_11xx.o)
-                0x00000000100006f8                SystemCoreClock
-                0x00000000100006fc                . = ALIGN (0x4)
-                0x00000000100006fc                _ebss = .
+ COMMON         0x0000000010000100        0x4 /home/greg/Documents/CLIMER/Firmware/lpc_chip_11cxx_lib/Debug/liblpc_chip_11cxx_lib.a(chip_11xx.o)
+                0x0000000010000100                SystemCoreClock
+                0x0000000010000104                . = ALIGN (0x4)
+                0x0000000010000104                _ebss = .
                 [!provide]                        PROVIDE (end, .)
 
 .noinit_RAM2    0x0000000010000000        0x0
@@ -1421,275 +1470,141 @@ END GROUP
  *(.noinit.$RAM_00*)
                 0x0000000010000000                . = ALIGN (0x4)
 
-.noinit         0x00000000100006fc        0x0
-                0x00000000100006fc                _noinit = .
+.noinit         0x0000000010000104        0x0
+                0x0000000010000104                _noinit = .
  *(.noinit*)
-                0x00000000100006fc                . = ALIGN (0x4)
-                0x00000000100006fc                _end_noinit = .
+                0x0000000010000104                . = ALIGN (0x4)
+                0x0000000010000104                _end_noinit = .
                 [!provide]                        PROVIDE (_pvHeapStart, DEFINED (__user_heap_base)?__user_heap_base:.)
                 0x0000000010002000                PROVIDE (_vStackTop, DEFINED (__user_stack_top)?__user_stack_top:(__top_RamLoc8 - 0x0))
                 0xffffffffefffdae3                PROVIDE (__valid_user_code_checksum, (0x0 - (((_vStackTop + (ResetISR + 0x1)) + (DEFINED (NMI_Handler)?NMI_Handler:M0_NMI_Handler + 0x1)) + (DEFINED (HardFault_Handler)?HardFault_Handler:M0_HardFault_Handler + 0x1))))
                 0x0000000000000000                _image_start = LOADADDR (.text)
-                0x0000000000006c04                _image_end = (LOADADDR (.data) + SIZEOF (.data))
-                0x0000000000006c04                _image_size = (_image_end - _image_start)
+                0x0000000000000798                _image_end = (LOADADDR (.data) + SIZEOF (.data))
+                0x0000000000000798                _image_size = (_image_end - _image_start)
 OUTPUT(BNO_CAN.axf elf32-littlearm)
 
-.debug_info     0x0000000000000000     0x63ba
- .debug_info    0x0000000000000000      0x247 ./src/BNO055.o
- .debug_info    0x0000000000000247     0x1627 ./src/BNO_CAN.o
- .debug_info    0x000000000000186e      0x8ec ./src/SSD1306.o
- .debug_info    0x000000000000215a      0x20b ./src/cr_startup_lpc11xx.o
- .debug_info    0x0000000000002365      0x581 ./src/cube.o
- .debug_info    0x00000000000028e6      0x252 ./src/fonts.o
- .debug_info    0x0000000000002b38      0x117 ./src/sysinit.o
- .debug_info    0x0000000000002c4f      0x10a /home/greg/Documents/CLIMER/Firmware/lpc_chip_11cxx_lib/Debug/liblpc_chip_11cxx_lib.a(chip_11xx.o)
- .debug_info    0x0000000000002d59      0x8d0 /home/greg/Documents/CLIMER/Firmware/lpc_chip_11cxx_lib/Debug/liblpc_chip_11cxx_lib.a(clock_11xx.o)
- .debug_info    0x0000000000003629     0x10e6 /home/greg/Documents/CLIMER/Firmware/lpc_chip_11cxx_lib/Debug/liblpc_chip_11cxx_lib.a(i2c_11xx.o)
- .debug_info    0x000000000000470f      0x820 /home/greg/Documents/CLIMER/Firmware/lpc_chip_11cxx_lib/Debug/liblpc_chip_11cxx_lib.a(sysinit_11xx.o)
- .debug_info    0x0000000000004f2f      0xebf /home/greg/Documents/CLIMER/Firmware/lpc_chip_11cxx_lib/Debug/liblpc_chip_11cxx_lib.a(uart_11xx.o)
- .debug_info    0x0000000000005dee      0x5cc /home/greg/Documents/CLIMER/Firmware/lpc_chip_11cxx_lib/Debug/liblpc_chip_11cxx_lib.a(sysctl_11xx.o)
+.debug_info     0x0000000000000000     0x305e
+ .debug_info    0x0000000000000000     0x1576 ./src/BNO_CAN.o
+ .debug_info    0x0000000000001576      0x20b ./src/cr_startup_lpc11xx.o
+ .debug_info    0x0000000000001781      0x117 ./src/sysinit.o
+ .debug_info    0x0000000000001898      0x10a /home/greg/Documents/CLIMER/Firmware/lpc_chip_11cxx_lib/Debug/liblpc_chip_11cxx_lib.a(chip_11xx.o)
+ .debug_info    0x00000000000019a2      0x8d0 /home/greg/Documents/CLIMER/Firmware/lpc_chip_11cxx_lib/Debug/liblpc_chip_11cxx_lib.a(clock_11xx.o)
+ .debug_info    0x0000000000002272      0x820 /home/greg/Documents/CLIMER/Firmware/lpc_chip_11cxx_lib/Debug/liblpc_chip_11cxx_lib.a(sysinit_11xx.o)
+ .debug_info    0x0000000000002a92      0x5cc /home/greg/Documents/CLIMER/Firmware/lpc_chip_11cxx_lib/Debug/liblpc_chip_11cxx_lib.a(sysctl_11xx.o)
 
-.debug_abbrev   0x0000000000000000     0x14c0
- .debug_abbrev  0x0000000000000000      0x139 ./src/BNO055.o
- .debug_abbrev  0x0000000000000139      0x32c ./src/BNO_CAN.o
- .debug_abbrev  0x0000000000000465      0x1ef ./src/SSD1306.o
- .debug_abbrev  0x0000000000000654       0xf4 ./src/cr_startup_lpc11xx.o
- .debug_abbrev  0x0000000000000748      0x155 ./src/cube.o
- .debug_abbrev  0x000000000000089d       0xfe ./src/fonts.o
- .debug_abbrev  0x000000000000099b       0xa6 ./src/sysinit.o
- .debug_abbrev  0x0000000000000a41       0xa6 /home/greg/Documents/CLIMER/Firmware/lpc_chip_11cxx_lib/Debug/liblpc_chip_11cxx_lib.a(chip_11xx.o)
- .debug_abbrev  0x0000000000000ae7      0x1e6 /home/greg/Documents/CLIMER/Firmware/lpc_chip_11cxx_lib/Debug/liblpc_chip_11cxx_lib.a(clock_11xx.o)
- .debug_abbrev  0x0000000000000ccd      0x304 /home/greg/Documents/CLIMER/Firmware/lpc_chip_11cxx_lib/Debug/liblpc_chip_11cxx_lib.a(i2c_11xx.o)
- .debug_abbrev  0x0000000000000fd1      0x1ad /home/greg/Documents/CLIMER/Firmware/lpc_chip_11cxx_lib/Debug/liblpc_chip_11cxx_lib.a(sysinit_11xx.o)
- .debug_abbrev  0x000000000000117e      0x236 /home/greg/Documents/CLIMER/Firmware/lpc_chip_11cxx_lib/Debug/liblpc_chip_11cxx_lib.a(uart_11xx.o)
- .debug_abbrev  0x00000000000013b4      0x10c /home/greg/Documents/CLIMER/Firmware/lpc_chip_11cxx_lib/Debug/liblpc_chip_11cxx_lib.a(sysctl_11xx.o)
+.debug_abbrev   0x0000000000000000      0xa09
+ .debug_abbrev  0x0000000000000000      0x32a ./src/BNO_CAN.o
+ .debug_abbrev  0x000000000000032a       0xf4 ./src/cr_startup_lpc11xx.o
+ .debug_abbrev  0x000000000000041e       0xa6 ./src/sysinit.o
+ .debug_abbrev  0x00000000000004c4       0xa6 /home/greg/Documents/CLIMER/Firmware/lpc_chip_11cxx_lib/Debug/liblpc_chip_11cxx_lib.a(chip_11xx.o)
+ .debug_abbrev  0x000000000000056a      0x1e6 /home/greg/Documents/CLIMER/Firmware/lpc_chip_11cxx_lib/Debug/liblpc_chip_11cxx_lib.a(clock_11xx.o)
+ .debug_abbrev  0x0000000000000750      0x1ad /home/greg/Documents/CLIMER/Firmware/lpc_chip_11cxx_lib/Debug/liblpc_chip_11cxx_lib.a(sysinit_11xx.o)
+ .debug_abbrev  0x00000000000008fd      0x10c /home/greg/Documents/CLIMER/Firmware/lpc_chip_11cxx_lib/Debug/liblpc_chip_11cxx_lib.a(sysctl_11xx.o)
 
-.debug_aranges  0x0000000000000000      0x580
+.debug_aranges  0x0000000000000000      0x240
  .debug_aranges
-                0x0000000000000000       0x30 ./src/BNO055.o
+                0x0000000000000000       0x98 ./src/BNO_CAN.o
  .debug_aranges
-                0x0000000000000030       0x98 ./src/BNO_CAN.o
+                0x0000000000000098       0x60 ./src/cr_startup_lpc11xx.o
  .debug_aranges
-                0x00000000000000c8       0xa0 ./src/SSD1306.o
+                0x00000000000000f8       0x20 ./src/sysinit.o
  .debug_aranges
-                0x0000000000000168       0x60 ./src/cr_startup_lpc11xx.o
+                0x0000000000000118       0x20 /home/greg/Documents/CLIMER/Firmware/lpc_chip_11cxx_lib/Debug/liblpc_chip_11cxx_lib.a(chip_11xx.o)
  .debug_aranges
-                0x00000000000001c8       0x38 ./src/cube.o
+                0x0000000000000138       0x88 /home/greg/Documents/CLIMER/Firmware/lpc_chip_11cxx_lib/Debug/liblpc_chip_11cxx_lib.a(clock_11xx.o)
  .debug_aranges
-                0x0000000000000200       0x20 ./src/fonts.o
+                0x00000000000001c0       0x48 /home/greg/Documents/CLIMER/Firmware/lpc_chip_11cxx_lib/Debug/liblpc_chip_11cxx_lib.a(sysinit_11xx.o)
  .debug_aranges
-                0x0000000000000220       0x20 ./src/sysinit.o
- .debug_aranges
-                0x0000000000000240       0x20 /home/greg/Documents/CLIMER/Firmware/lpc_chip_11cxx_lib/Debug/liblpc_chip_11cxx_lib.a(chip_11xx.o)
- .debug_aranges
-                0x0000000000000260       0x88 /home/greg/Documents/CLIMER/Firmware/lpc_chip_11cxx_lib/Debug/liblpc_chip_11cxx_lib.a(clock_11xx.o)
- .debug_aranges
-                0x00000000000002e8      0x128 /home/greg/Documents/CLIMER/Firmware/lpc_chip_11cxx_lib/Debug/liblpc_chip_11cxx_lib.a(i2c_11xx.o)
- .debug_aranges
-                0x0000000000000410       0x48 /home/greg/Documents/CLIMER/Firmware/lpc_chip_11cxx_lib/Debug/liblpc_chip_11cxx_lib.a(sysinit_11xx.o)
- .debug_aranges
-                0x0000000000000458       0xf0 /home/greg/Documents/CLIMER/Firmware/lpc_chip_11cxx_lib/Debug/liblpc_chip_11cxx_lib.a(uart_11xx.o)
- .debug_aranges
-                0x0000000000000548       0x38 /home/greg/Documents/CLIMER/Firmware/lpc_chip_11cxx_lib/Debug/liblpc_chip_11cxx_lib.a(sysctl_11xx.o)
+                0x0000000000000208       0x38 /home/greg/Documents/CLIMER/Firmware/lpc_chip_11cxx_lib/Debug/liblpc_chip_11cxx_lib.a(sysctl_11xx.o)
 
-.debug_ranges   0x0000000000000000      0x4b0
- .debug_ranges  0x0000000000000000       0x20 ./src/BNO055.o
- .debug_ranges  0x0000000000000020       0x88 ./src/BNO_CAN.o
- .debug_ranges  0x00000000000000a8       0x90 ./src/SSD1306.o
- .debug_ranges  0x0000000000000138       0x50 ./src/cr_startup_lpc11xx.o
- .debug_ranges  0x0000000000000188       0x28 ./src/cube.o
- .debug_ranges  0x00000000000001b0       0x10 ./src/fonts.o
- .debug_ranges  0x00000000000001c0       0x10 ./src/sysinit.o
- .debug_ranges  0x00000000000001d0       0x10 /home/greg/Documents/CLIMER/Firmware/lpc_chip_11cxx_lib/Debug/liblpc_chip_11cxx_lib.a(chip_11xx.o)
- .debug_ranges  0x00000000000001e0       0x78 /home/greg/Documents/CLIMER/Firmware/lpc_chip_11cxx_lib/Debug/liblpc_chip_11cxx_lib.a(clock_11xx.o)
- .debug_ranges  0x0000000000000258      0x118 /home/greg/Documents/CLIMER/Firmware/lpc_chip_11cxx_lib/Debug/liblpc_chip_11cxx_lib.a(i2c_11xx.o)
- .debug_ranges  0x0000000000000370       0x38 /home/greg/Documents/CLIMER/Firmware/lpc_chip_11cxx_lib/Debug/liblpc_chip_11cxx_lib.a(sysinit_11xx.o)
- .debug_ranges  0x00000000000003a8       0xe0 /home/greg/Documents/CLIMER/Firmware/lpc_chip_11cxx_lib/Debug/liblpc_chip_11cxx_lib.a(uart_11xx.o)
- .debug_ranges  0x0000000000000488       0x28 /home/greg/Documents/CLIMER/Firmware/lpc_chip_11cxx_lib/Debug/liblpc_chip_11cxx_lib.a(sysctl_11xx.o)
+.debug_ranges   0x0000000000000000      0x1d0
+ .debug_ranges  0x0000000000000000       0x88 ./src/BNO_CAN.o
+ .debug_ranges  0x0000000000000088       0x50 ./src/cr_startup_lpc11xx.o
+ .debug_ranges  0x00000000000000d8       0x10 ./src/sysinit.o
+ .debug_ranges  0x00000000000000e8       0x10 /home/greg/Documents/CLIMER/Firmware/lpc_chip_11cxx_lib/Debug/liblpc_chip_11cxx_lib.a(chip_11xx.o)
+ .debug_ranges  0x00000000000000f8       0x78 /home/greg/Documents/CLIMER/Firmware/lpc_chip_11cxx_lib/Debug/liblpc_chip_11cxx_lib.a(clock_11xx.o)
+ .debug_ranges  0x0000000000000170       0x38 /home/greg/Documents/CLIMER/Firmware/lpc_chip_11cxx_lib/Debug/liblpc_chip_11cxx_lib.a(sysinit_11xx.o)
+ .debug_ranges  0x00000000000001a8       0x28 /home/greg/Documents/CLIMER/Firmware/lpc_chip_11cxx_lib/Debug/liblpc_chip_11cxx_lib.a(sysctl_11xx.o)
 
-.debug_macro    0x0000000000000000     0x3b5a
- .debug_macro   0x0000000000000000      0x157 ./src/BNO055.o
- .debug_macro   0x0000000000000157      0x8c2 ./src/BNO055.o
- .debug_macro   0x0000000000000a19       0x10 ./src/BNO055.o
- .debug_macro   0x0000000000000a29      0x12d ./src/BNO055.o
- .debug_macro   0x0000000000000b56      0x5b2 ./src/BNO055.o
- .debug_macro   0x0000000000001108       0x70 ./src/BNO055.o
- .debug_macro   0x0000000000001178       0x22 ./src/BNO055.o
- .debug_macro   0x000000000000119a       0x7b ./src/BNO055.o
- .debug_macro   0x0000000000001215       0x10 ./src/BNO055.o
- .debug_macro   0x0000000000001225       0x1f ./src/BNO055.o
- .debug_macro   0x0000000000001244       0x3a ./src/BNO055.o
- .debug_macro   0x000000000000127e      0x241 ./src/BNO055.o
- .debug_macro   0x00000000000014bf      0x117 ./src/BNO055.o
- .debug_macro   0x00000000000015d6       0x22 ./src/BNO055.o
- .debug_macro   0x00000000000015f8       0xb2 ./src/BNO055.o
- .debug_macro   0x00000000000016aa       0x10 ./src/BNO055.o
- .debug_macro   0x00000000000016ba      0x137 ./src/BNO055.o
- .debug_macro   0x00000000000017f1       0x4c ./src/BNO055.o
- .debug_macro   0x000000000000183d       0x16 ./src/BNO055.o
- .debug_macro   0x0000000000001853      0x31a ./src/BNO055.o
- .debug_macro   0x0000000000001b6d       0x2e ./src/BNO055.o
- .debug_macro   0x0000000000001b9b       0xb8 ./src/BNO055.o
- .debug_macro   0x0000000000001c53       0x11 ./src/BNO055.o
- .debug_macro   0x0000000000001c64       0x7c ./src/BNO055.o
- .debug_macro   0x0000000000001ce0      0x21c ./src/BNO055.o
- .debug_macro   0x0000000000001efc      0x113 ./src/BNO055.o
- .debug_macro   0x000000000000200f      0x1e1 ./src/BNO_CAN.o
- .debug_macro   0x00000000000021f0       0x82 ./src/BNO_CAN.o
- .debug_macro   0x0000000000002272       0x9a ./src/BNO_CAN.o
- .debug_macro   0x000000000000230c       0x22 ./src/BNO_CAN.o
- .debug_macro   0x000000000000232e       0x46 ./src/BNO_CAN.o
- .debug_macro   0x0000000000002374       0x76 ./src/BNO_CAN.o
- .debug_macro   0x00000000000023ea      0x195 ./src/SSD1306.o
- .debug_macro   0x000000000000257f       0xa0 ./src/SSD1306.o
- .debug_macro   0x000000000000261f       0x74 ./src/SSD1306.o
- .debug_macro   0x0000000000002693       0x1d ./src/cr_startup_lpc11xx.o
- .debug_macro   0x00000000000026b0      0x1a8 ./src/cube.o
- .debug_macro   0x0000000000002858       0xc4 ./src/cube.o
- .debug_macro   0x000000000000291c       0x5a ./src/fonts.o
- .debug_macro   0x0000000000002976      0x148 ./src/sysinit.o
- .debug_macro   0x0000000000002abe      0x148 /home/greg/Documents/CLIMER/Firmware/lpc_chip_11cxx_lib/Debug/liblpc_chip_11cxx_lib.a(chip_11xx.o)
- .debug_macro   0x0000000000002c06      0x8b0 /home/greg/Documents/CLIMER/Firmware/lpc_chip_11cxx_lib/Debug/liblpc_chip_11cxx_lib.a(chip_11xx.o)
- .debug_macro   0x00000000000034b6      0x148 /home/greg/Documents/CLIMER/Firmware/lpc_chip_11cxx_lib/Debug/liblpc_chip_11cxx_lib.a(clock_11xx.o)
- .debug_macro   0x00000000000035fe      0x15a /home/greg/Documents/CLIMER/Firmware/lpc_chip_11cxx_lib/Debug/liblpc_chip_11cxx_lib.a(i2c_11xx.o)
- .debug_macro   0x0000000000003758      0x148 /home/greg/Documents/CLIMER/Firmware/lpc_chip_11cxx_lib/Debug/liblpc_chip_11cxx_lib.a(sysinit_11xx.o)
- .debug_macro   0x00000000000038a0      0x148 /home/greg/Documents/CLIMER/Firmware/lpc_chip_11cxx_lib/Debug/liblpc_chip_11cxx_lib.a(uart_11xx.o)
- .debug_macro   0x00000000000039e8      0x172 /home/greg/Documents/CLIMER/Firmware/lpc_chip_11cxx_lib/Debug/liblpc_chip_11cxx_lib.a(sysctl_11xx.o)
+.debug_macro    0x0000000000000000     0x133a
+ .debug_macro   0x0000000000000000      0x1e1 ./src/BNO_CAN.o
+ .debug_macro   0x00000000000001e1       0x82 ./src/BNO_CAN.o
+ .debug_macro   0x0000000000000263       0x9a ./src/BNO_CAN.o
+ .debug_macro   0x00000000000002fd       0x22 ./src/BNO_CAN.o
+ .debug_macro   0x000000000000031f       0x46 ./src/BNO_CAN.o
+ .debug_macro   0x0000000000000365       0x76 ./src/BNO_CAN.o
+ .debug_macro   0x00000000000003db       0x1d ./src/cr_startup_lpc11xx.o
+ .debug_macro   0x00000000000003f8      0x148 ./src/sysinit.o
+ .debug_macro   0x0000000000000540      0x148 /home/greg/Documents/CLIMER/Firmware/lpc_chip_11cxx_lib/Debug/liblpc_chip_11cxx_lib.a(chip_11xx.o)
+ .debug_macro   0x0000000000000688      0x8b0 /home/greg/Documents/CLIMER/Firmware/lpc_chip_11cxx_lib/Debug/liblpc_chip_11cxx_lib.a(chip_11xx.o)
+ .debug_macro   0x0000000000000f38      0x148 /home/greg/Documents/CLIMER/Firmware/lpc_chip_11cxx_lib/Debug/liblpc_chip_11cxx_lib.a(clock_11xx.o)
+ .debug_macro   0x0000000000001080      0x148 /home/greg/Documents/CLIMER/Firmware/lpc_chip_11cxx_lib/Debug/liblpc_chip_11cxx_lib.a(sysinit_11xx.o)
+ .debug_macro   0x00000000000011c8      0x172 /home/greg/Documents/CLIMER/Firmware/lpc_chip_11cxx_lib/Debug/liblpc_chip_11cxx_lib.a(sysctl_11xx.o)
 
-.debug_line     0x0000000000000000     0x308f
- .debug_line    0x0000000000000000      0x37a ./src/BNO055.o
- .debug_line    0x000000000000037a      0x57a ./src/BNO_CAN.o
- .debug_line    0x00000000000008f4      0x653 ./src/SSD1306.o
- .debug_line    0x0000000000000f47       0xb8 ./src/cr_startup_lpc11xx.o
- .debug_line    0x0000000000000fff      0x46c ./src/cube.o
- .debug_line    0x000000000000146b      0x15f ./src/fonts.o
- .debug_line    0x00000000000015ca      0x2b4 ./src/sysinit.o
- .debug_line    0x000000000000187e      0x2b6 /home/greg/Documents/CLIMER/Firmware/lpc_chip_11cxx_lib/Debug/liblpc_chip_11cxx_lib.a(chip_11xx.o)
- .debug_line    0x0000000000001b34      0x3e1 /home/greg/Documents/CLIMER/Firmware/lpc_chip_11cxx_lib/Debug/liblpc_chip_11cxx_lib.a(clock_11xx.o)
- .debug_line    0x0000000000001f15      0x634 /home/greg/Documents/CLIMER/Firmware/lpc_chip_11cxx_lib/Debug/liblpc_chip_11cxx_lib.a(i2c_11xx.o)
- .debug_line    0x0000000000002549      0x32d /home/greg/Documents/CLIMER/Firmware/lpc_chip_11cxx_lib/Debug/liblpc_chip_11cxx_lib.a(sysinit_11xx.o)
- .debug_line    0x0000000000002876      0x526 /home/greg/Documents/CLIMER/Firmware/lpc_chip_11cxx_lib/Debug/liblpc_chip_11cxx_lib.a(uart_11xx.o)
- .debug_line    0x0000000000002d9c      0x2f3 /home/greg/Documents/CLIMER/Firmware/lpc_chip_11cxx_lib/Debug/liblpc_chip_11cxx_lib.a(sysctl_11xx.o)
+.debug_line     0x0000000000000000     0x1569
+ .debug_line    0x0000000000000000      0x546 ./src/BNO_CAN.o
+ .debug_line    0x0000000000000546       0xb8 ./src/cr_startup_lpc11xx.o
+ .debug_line    0x00000000000005fe      0x2b4 ./src/sysinit.o
+ .debug_line    0x00000000000008b2      0x2b6 /home/greg/Documents/CLIMER/Firmware/lpc_chip_11cxx_lib/Debug/liblpc_chip_11cxx_lib.a(chip_11xx.o)
+ .debug_line    0x0000000000000b68      0x3e1 /home/greg/Documents/CLIMER/Firmware/lpc_chip_11cxx_lib/Debug/liblpc_chip_11cxx_lib.a(clock_11xx.o)
+ .debug_line    0x0000000000000f49      0x32d /home/greg/Documents/CLIMER/Firmware/lpc_chip_11cxx_lib/Debug/liblpc_chip_11cxx_lib.a(sysinit_11xx.o)
+ .debug_line    0x0000000000001276      0x2f3 /home/greg/Documents/CLIMER/Firmware/lpc_chip_11cxx_lib/Debug/liblpc_chip_11cxx_lib.a(sysctl_11xx.o)
 
-.debug_str      0x0000000000000000     0xb231
- .debug_str     0x0000000000000000     0x7fdc ./src/BNO055.o
-                                       0x80d4 (size before relaxing)
- .debug_str     0x0000000000007fdc     0x1756 ./src/BNO_CAN.o
-                                       0x981a (size before relaxing)
- .debug_str     0x0000000000009732      0x1c5 ./src/SSD1306.o
-                                       0x856d (size before relaxing)
- .debug_str     0x00000000000098f7      0x18c ./src/cr_startup_lpc11xx.o
+.debug_str      0x0000000000000000     0xa1c2
+ .debug_str     0x0000000000000000     0x96b6 ./src/BNO_CAN.o
+                                       0x97f5 (size before relaxing)
+ .debug_str     0x00000000000096b6      0x18c ./src/cr_startup_lpc11xx.o
                                        0x26a9 (size before relaxing)
- .debug_str     0x0000000000009a83      0x569 ./src/cube.o
-                                       0x892c (size before relaxing)
- .debug_str     0x0000000000009fec       0x5f ./src/fonts.o
-                                       0x3cf6 (size before relaxing)
- .debug_str     0x000000000000a04b       0x11 ./src/sysinit.o
+ .debug_str     0x0000000000009842       0x11 ./src/sysinit.o
                                        0x7e80 (size before relaxing)
- .debug_str     0x000000000000a05c      0x114 /home/greg/Documents/CLIMER/Firmware/lpc_chip_11cxx_lib/Debug/liblpc_chip_11cxx_lib.a(chip_11xx.o)
+ .debug_str     0x0000000000009853      0x114 /home/greg/Documents/CLIMER/Firmware/lpc_chip_11cxx_lib/Debug/liblpc_chip_11cxx_lib.a(chip_11xx.o)
                                        0x7e4b (size before relaxing)
- .debug_str     0x000000000000a170      0x555 /home/greg/Documents/CLIMER/Firmware/lpc_chip_11cxx_lib/Debug/liblpc_chip_11cxx_lib.a(clock_11xx.o)
+ .debug_str     0x0000000000009967      0x555 /home/greg/Documents/CLIMER/Firmware/lpc_chip_11cxx_lib/Debug/liblpc_chip_11cxx_lib.a(clock_11xx.o)
                                        0x861f (size before relaxing)
- .debug_str     0x000000000000a6c5      0x5d6 /home/greg/Documents/CLIMER/Firmware/lpc_chip_11cxx_lib/Debug/liblpc_chip_11cxx_lib.a(i2c_11xx.o)
-                                       0x8856 (size before relaxing)
- .debug_str     0x000000000000ac9b      0x136 /home/greg/Documents/CLIMER/Firmware/lpc_chip_11cxx_lib/Debug/liblpc_chip_11cxx_lib.a(sysinit_11xx.o)
+ .debug_str     0x0000000000009ebc      0x167 /home/greg/Documents/CLIMER/Firmware/lpc_chip_11cxx_lib/Debug/liblpc_chip_11cxx_lib.a(sysinit_11xx.o)
                                        0x84c2 (size before relaxing)
- .debug_str     0x000000000000add1      0x2c1 /home/greg/Documents/CLIMER/Firmware/lpc_chip_11cxx_lib/Debug/liblpc_chip_11cxx_lib.a(uart_11xx.o)
-                                       0x85d3 (size before relaxing)
- .debug_str     0x000000000000b092      0x19f /home/greg/Documents/CLIMER/Firmware/lpc_chip_11cxx_lib/Debug/liblpc_chip_11cxx_lib.a(sysctl_11xx.o)
+ .debug_str     0x000000000000a023      0x19f /home/greg/Documents/CLIMER/Firmware/lpc_chip_11cxx_lib/Debug/liblpc_chip_11cxx_lib.a(sysctl_11xx.o)
                                        0x8269 (size before relaxing)
 
 .comment        0x0000000000000000       0x7f
- .comment       0x0000000000000000       0x7f ./src/BNO055.o
+ .comment       0x0000000000000000       0x7f ./src/BNO_CAN.o
                                          0x80 (size before relaxing)
- .comment       0x000000000000007f       0x80 ./src/BNO_CAN.o
- .comment       0x000000000000007f       0x80 ./src/SSD1306.o
  .comment       0x000000000000007f       0x80 ./src/cr_startup_lpc11xx.o
- .comment       0x000000000000007f       0x80 ./src/cube.o
- .comment       0x000000000000007f       0x80 ./src/fonts.o
  .comment       0x000000000000007f       0x80 ./src/sysinit.o
  .comment       0x000000000000007f       0x80 /home/greg/Documents/CLIMER/Firmware/lpc_chip_11cxx_lib/Debug/liblpc_chip_11cxx_lib.a(chip_11xx.o)
  .comment       0x000000000000007f       0x80 /home/greg/Documents/CLIMER/Firmware/lpc_chip_11cxx_lib/Debug/liblpc_chip_11cxx_lib.a(clock_11xx.o)
- .comment       0x000000000000007f       0x80 /home/greg/Documents/CLIMER/Firmware/lpc_chip_11cxx_lib/Debug/liblpc_chip_11cxx_lib.a(i2c_11xx.o)
  .comment       0x000000000000007f       0x80 /home/greg/Documents/CLIMER/Firmware/lpc_chip_11cxx_lib/Debug/liblpc_chip_11cxx_lib.a(sysinit_11xx.o)
- .comment       0x000000000000007f       0x80 /home/greg/Documents/CLIMER/Firmware/lpc_chip_11cxx_lib/Debug/liblpc_chip_11cxx_lib.a(uart_11xx.o)
  .comment       0x000000000000007f       0x80 /home/greg/Documents/CLIMER/Firmware/lpc_chip_11cxx_lib/Debug/liblpc_chip_11cxx_lib.a(sysctl_11xx.o)
- .comment       0x000000000000007f       0x80 /usr/local/mcuxpressoide-10.1.1_606/ide/tools/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/libcr_c.a(memset.o)
  .comment       0x000000000000007f       0x80 /usr/local/mcuxpressoide-10.1.1_606/ide/tools/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/libcr_c.a(__weak__main.o)
- .comment       0x000000000000007f       0x80 /usr/local/mcuxpressoide-10.1.1_606/ide/tools/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/libcr_c.a(cos.o)
- .comment       0x000000000000007f       0x80 /usr/local/mcuxpressoide-10.1.1_606/ide/tools/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/libcr_c.a(sin.o)
- .comment       0x000000000000007f       0x80 /usr/local/mcuxpressoide-10.1.1_606/ide/tools/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/libcr_c.a(_sincos.o)
- .comment       0x000000000000007f       0x80 /usr/local/mcuxpressoide-10.1.1_606/ide/tools/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/libcr_c.a(errno.o)
- .comment       0x000000000000007f       0x80 /usr/local/mcuxpressoide-10.1.1_606/ide/tools/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/libcr_c.a(fabs.o)
- .comment       0x000000000000007f       0x80 /usr/local/mcuxpressoide-10.1.1_606/ide/tools/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/libcr_c.a(_hugeval.o)
- .comment       0x000000000000007f       0x80 /usr/local/mcuxpressoide-10.1.1_606/ide/tools/bin/../lib/gcc/arm-none-eabi/6.3.1/thumb/v6-m/libcr_eabihelpers.a(double.o)
 
 .ARM.attributes
                 0x0000000000000000       0x2f
  .ARM.attributes
-                0x0000000000000000       0x31 ./src/BNO055.o
+                0x0000000000000000       0x31 ./src/BNO_CAN.o
  .ARM.attributes
-                0x0000000000000031       0x31 ./src/BNO_CAN.o
+                0x0000000000000031       0x31 ./src/cr_startup_lpc11xx.o
  .ARM.attributes
-                0x0000000000000062       0x31 ./src/SSD1306.o
+                0x0000000000000062       0x31 ./src/sysinit.o
  .ARM.attributes
-                0x0000000000000093       0x31 ./src/cr_startup_lpc11xx.o
+                0x0000000000000093       0x31 /home/greg/Documents/CLIMER/Firmware/lpc_chip_11cxx_lib/Debug/liblpc_chip_11cxx_lib.a(chip_11xx.o)
  .ARM.attributes
-                0x00000000000000c4       0x31 ./src/cube.o
+                0x00000000000000c4       0x31 /home/greg/Documents/CLIMER/Firmware/lpc_chip_11cxx_lib/Debug/liblpc_chip_11cxx_lib.a(clock_11xx.o)
  .ARM.attributes
-                0x00000000000000f5       0x31 ./src/fonts.o
+                0x00000000000000f5       0x31 /home/greg/Documents/CLIMER/Firmware/lpc_chip_11cxx_lib/Debug/liblpc_chip_11cxx_lib.a(sysinit_11xx.o)
  .ARM.attributes
-                0x0000000000000126       0x31 ./src/sysinit.o
+                0x0000000000000126       0x31 /home/greg/Documents/CLIMER/Firmware/lpc_chip_11cxx_lib/Debug/liblpc_chip_11cxx_lib.a(sysctl_11xx.o)
  .ARM.attributes
-                0x0000000000000157       0x31 /home/greg/Documents/CLIMER/Firmware/lpc_chip_11cxx_lib/Debug/liblpc_chip_11cxx_lib.a(chip_11xx.o)
+                0x0000000000000157       0x31 /usr/local/mcuxpressoide-10.1.1_606/ide/tools/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/libcr_c.a(__weak__main.o)
  .ARM.attributes
-                0x0000000000000188       0x31 /home/greg/Documents/CLIMER/Firmware/lpc_chip_11cxx_lib/Debug/liblpc_chip_11cxx_lib.a(clock_11xx.o)
+                0x0000000000000188       0x21 /usr/local/mcuxpressoide-10.1.1_606/ide/tools/bin/../lib/gcc/arm-none-eabi/6.3.1/thumb/v6-m/libcr_eabihelpers.a(division_32.o)
  .ARM.attributes
-                0x00000000000001b9       0x31 /home/greg/Documents/CLIMER/Firmware/lpc_chip_11cxx_lib/Debug/liblpc_chip_11cxx_lib.a(i2c_11xx.o)
- .ARM.attributes
-                0x00000000000001ea       0x31 /home/greg/Documents/CLIMER/Firmware/lpc_chip_11cxx_lib/Debug/liblpc_chip_11cxx_lib.a(sysinit_11xx.o)
- .ARM.attributes
-                0x000000000000021b       0x31 /home/greg/Documents/CLIMER/Firmware/lpc_chip_11cxx_lib/Debug/liblpc_chip_11cxx_lib.a(uart_11xx.o)
- .ARM.attributes
-                0x000000000000024c       0x31 /home/greg/Documents/CLIMER/Firmware/lpc_chip_11cxx_lib/Debug/liblpc_chip_11cxx_lib.a(sysctl_11xx.o)
- .ARM.attributes
-                0x000000000000027d       0x31 /usr/local/mcuxpressoide-10.1.1_606/ide/tools/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/libcr_c.a(memset.o)
- .ARM.attributes
-                0x00000000000002ae       0x31 /usr/local/mcuxpressoide-10.1.1_606/ide/tools/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/libcr_c.a(__weak__main.o)
- .ARM.attributes
-                0x00000000000002df       0x31 /usr/local/mcuxpressoide-10.1.1_606/ide/tools/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/libcr_c.a(cos.o)
- .ARM.attributes
-                0x0000000000000310       0x31 /usr/local/mcuxpressoide-10.1.1_606/ide/tools/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/libcr_c.a(sin.o)
- .ARM.attributes
-                0x0000000000000341       0x31 /usr/local/mcuxpressoide-10.1.1_606/ide/tools/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/libcr_c.a(_sincos.o)
- .ARM.attributes
-                0x0000000000000372       0x31 /usr/local/mcuxpressoide-10.1.1_606/ide/tools/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/libcr_c.a(errno.o)
- .ARM.attributes
-                0x00000000000003a3       0x31 /usr/local/mcuxpressoide-10.1.1_606/ide/tools/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/libcr_c.a(fabs.o)
- .ARM.attributes
-                0x00000000000003d4       0x31 /usr/local/mcuxpressoide-10.1.1_606/ide/tools/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/libcr_c.a(_hugeval.o)
- .ARM.attributes
-                0x0000000000000405       0x21 /usr/local/mcuxpressoide-10.1.1_606/ide/tools/bin/../lib/gcc/arm-none-eabi/6.3.1/thumb/v6-m/libcr_eabihelpers.a(division_32.o)
- .ARM.attributes
-                0x0000000000000426       0x21 /usr/local/mcuxpressoide-10.1.1_606/ide/tools/bin/../lib/gcc/arm-none-eabi/6.3.1/thumb/v6-m/libcr_eabihelpers.a(division_idiv0.o)
- .ARM.attributes
-                0x0000000000000447       0x31 /usr/local/mcuxpressoide-10.1.1_606/ide/tools/bin/../lib/gcc/arm-none-eabi/6.3.1/thumb/v6-m/libcr_eabihelpers.a(double.o)
- .ARM.attributes
-                0x0000000000000478       0x21 /usr/local/mcuxpressoide-10.1.1_606/ide/tools/bin/../lib/gcc/arm-none-eabi/6.3.1/thumb/v6-m/libcr_eabihelpers.a(llong.o)
- .ARM.attributes
-                0x0000000000000499       0x21 /usr/local/mcuxpressoide-10.1.1_606/ide/tools/bin/../lib/gcc/arm-none-eabi/6.3.1/thumb/v6-m/libcr_eabihelpers.a(memcpy.o)
+                0x00000000000001a9       0x21 /usr/local/mcuxpressoide-10.1.1_606/ide/tools/bin/../lib/gcc/arm-none-eabi/6.3.1/thumb/v6-m/libcr_eabihelpers.a(division_idiv0.o)
 
-.debug_frame    0x0000000000000000     0x11d0
- .debug_frame   0x0000000000000000       0x70 ./src/BNO055.o
- .debug_frame   0x0000000000000070      0x208 ./src/BNO_CAN.o
- .debug_frame   0x0000000000000278      0x238 ./src/SSD1306.o
- .debug_frame   0x00000000000004b0      0x118 ./src/cr_startup_lpc11xx.o
- .debug_frame   0x00000000000005c8       0xa8 ./src/cube.o
- .debug_frame   0x0000000000000670       0x30 ./src/fonts.o
- .debug_frame   0x00000000000006a0       0x2c ./src/sysinit.o
- .debug_frame   0x00000000000006cc       0x2c /home/greg/Documents/CLIMER/Firmware/lpc_chip_11cxx_lib/Debug/liblpc_chip_11cxx_lib.a(chip_11xx.o)
- .debug_frame   0x00000000000006f8      0x1c0 /home/greg/Documents/CLIMER/Firmware/lpc_chip_11cxx_lib/Debug/liblpc_chip_11cxx_lib.a(clock_11xx.o)
- .debug_frame   0x00000000000008b8      0x450 /home/greg/Documents/CLIMER/Firmware/lpc_chip_11cxx_lib/Debug/liblpc_chip_11cxx_lib.a(i2c_11xx.o)
- .debug_frame   0x0000000000000d08       0xc8 /home/greg/Documents/CLIMER/Firmware/lpc_chip_11cxx_lib/Debug/liblpc_chip_11cxx_lib.a(sysinit_11xx.o)
- .debug_frame   0x0000000000000dd0      0x370 /home/greg/Documents/CLIMER/Firmware/lpc_chip_11cxx_lib/Debug/liblpc_chip_11cxx_lib.a(uart_11xx.o)
- .debug_frame   0x0000000000001140       0x90 /home/greg/Documents/CLIMER/Firmware/lpc_chip_11cxx_lib/Debug/liblpc_chip_11cxx_lib.a(sysctl_11xx.o)
+.debug_frame    0x0000000000000000      0x68c
+ .debug_frame   0x0000000000000000      0x204 ./src/BNO_CAN.o
+ .debug_frame   0x0000000000000204      0x118 ./src/cr_startup_lpc11xx.o
+ .debug_frame   0x000000000000031c       0x2c ./src/sysinit.o
+ .debug_frame   0x0000000000000348       0x2c /home/greg/Documents/CLIMER/Firmware/lpc_chip_11cxx_lib/Debug/liblpc_chip_11cxx_lib.a(chip_11xx.o)
+ .debug_frame   0x0000000000000374      0x1c0 /home/greg/Documents/CLIMER/Firmware/lpc_chip_11cxx_lib/Debug/liblpc_chip_11cxx_lib.a(clock_11xx.o)
+ .debug_frame   0x0000000000000534       0xc8 /home/greg/Documents/CLIMER/Firmware/lpc_chip_11cxx_lib/Debug/liblpc_chip_11cxx_lib.a(sysinit_11xx.o)
+ .debug_frame   0x00000000000005fc       0x90 /home/greg/Documents/CLIMER/Firmware/lpc_chip_11cxx_lib/Debug/liblpc_chip_11cxx_lib.a(sysctl_11xx.o)
